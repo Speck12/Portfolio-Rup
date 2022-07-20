@@ -26,7 +26,7 @@ section3 {
     align-items: center;
     justify-content: center;
 
-    background-color: #1c1c1c;
+    background-color: $primary-color;
 
     @include rainbow_inset;
     
@@ -90,11 +90,11 @@ section3 {
         & span:hover {
             background: #440ec2;
             transition: 0s;
-            animation-play-state:paused;
         }
 
         & span:active {
             cursor: grabbing;
+            animation-play-state:paused;
             
         }
 

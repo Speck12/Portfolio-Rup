@@ -1,0 +1,37 @@
+$breakpoints: (
+        xs: 32rem,
+        sm: 57.5rem,
+        md: 76.8rem,
+        lg: 1025px,
+        ws: 120rem,
+        hd: 138rem,
+        xl: 192rem
+);
+
+@mixin media-up($limit) {
+    @media all and (min-width: map-get($breakpoints, $limit)) {
+        @content;
+    }
+}
+
+@mixin media-down($limit) {
+    @media all and (max-width: map-get($breakpoints, $limit)) {
+        @content;
+    }
+}
+
+@mixin font-scale($min-size, $max-size) {
+    
+    $width_min: 32;
+    $width_max: 138;
+
+    font-size: $min-size;
+
+    @include media-up(xs) {
+        font-size: calc( #{$min-size} + #{strip-unit($max-size - $min-size)} * (100vw - #{$width_min * 1rem}) / #{$width_max - $width_min});
+    }
+    
+    @include media-up(ws) {
+        font-size: $max-size;
+    }
+}

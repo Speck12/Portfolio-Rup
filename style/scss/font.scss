@@ -1,0 +1,26 @@
+// Umbuntu-Font-Import
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+$base-font-size: 2vw;
+
+// Setting up  header val's
+.base-headers {
+    color: white;
+    font-family: "Ubuntu", Arial, sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.5vw;
+    color: white;
+    font-family: "Ubuntu", Arial, sans-serif;
+    font-weight: 200; 
+}
+
+// Looping all val's for h1 to h10
+@for $i from 1 to 11 {
+    h#{$i}{
+        font-size: $base-font-size + .5vw * $i; // calc => font-size + 5 per loop
+        @extend .base-headers; // adding header val's
+    }
+}

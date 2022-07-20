@@ -1,0 +1,85 @@
+// Mixins-Import
+@import "mixin/animation", "mixin/breakpoint", "mixin/main", "animation", "main";
+
+#footer-banner {
+    width: 105%;
+    height: 35vh;
+
+    top: 750vh;
+    margin-left: -1vw;
+
+    position: absolute;
+    display: flex;
+
+    flex-direction: row;
+
+    align-content: space-between;
+    justify-content: space-evenly;
+
+    background-color: $primary-color;
+    border: .2px solid;
+    box-shadow: $shadow-normal;
+
+    z-index: 108;
+
+    overflow: hidden;
+
+    @include rainbow;
+
+    @include media-down('md'){
+        height: 18vh;
+    }
+
+    & div {
+        width: 30%;
+        height: 80%;
+
+        @include media-down('md'){
+            width: 40%;
+        }
+
+        flex-direction: column;
+
+        position: relative;
+        display: flex;
+
+        justify-content: center;
+        align-content: center;
+
+        & > h1 {
+            margin: 0;
+            margin-top: 15%;
+
+            @include media-down('md'){
+                font-size: 18px;
+            }
+        }
+
+        & > p {
+
+            @include media-down('md'){
+                font-size: 13px;
+            }
+
+            font-weight: 100;
+
+            & > a {
+                text-decoration: none;
+                color: white;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                &:active {
+                    opacity: 0.5;
+                }
+            }
+
+        }
+
+        & > #contact-footer {
+            right: 10%;
+        }
+    }
+}

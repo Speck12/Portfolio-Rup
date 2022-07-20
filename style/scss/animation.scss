@@ -1,0 +1,122 @@
+@import "font";
+
+@keyframes rainbow {
+    0% {
+        border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
+        border-image-slice: 20%;
+        box-shadow: #8c00ff 0px 2px 12px -12px inset, #8c00ff 0px 3px 30px 0px;
+    }
+
+    50% {
+        border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%,  #2c90fc 100%);
+        border-image-slice: 20%;
+        box-shadow: #1500ff 0px 2px 7px -12px inset, #1500ff 0px 3px 30px 0px;
+    }
+
+    100% {
+        border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
+        border-image-slice: 20%;
+        box-shadow: #2c90fc 0px 2px 15px -18px inset, #2c90fc 0px 3px 30px 0px;    
+    }
+}
+
+@keyframes rainbow_text {
+    0% {
+        color: #2c90fc;
+        text-shadow: 0px 3px 10px #8c00ff;
+    }
+
+    50% {
+        color: #8c00ff;
+        text-shadow: 0px 3px 10px #1500ff;
+    }
+
+    100% {
+        color: #1500ff;
+        text-shadow: 0px 3px 10px #2c90fc;    
+    }
+}
+
+@keyframes rainbow_inset {
+    0% {
+        box-shadow: inset 0px 0px 550px darken(#8c00ff, 30%);
+    }
+
+    50% {
+        box-shadow: inset 0px 0px 1550px darken(#1500ff, 30%);
+    }
+
+    100% {
+        box-shadow: inset 0px 0px 1750px darken(#2c90fc, 15%);    
+    }
+}
+
+@keyframes rainbow_outset {
+    0% {
+        box-shadow: 0px 0px 10px darken(#8c00ff, 30%);
+    }
+
+    50% {
+        box-shadow: 0px 0px 10px darken(#1500ff, 30%);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px darken(#2c90fc, 15%);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    0% {
+        transform: rotate(12deg);
+    }
+
+    100% {
+        transform: rotate(-12deg);
+    }
+}
+
+@keyframes boxcolor {
+    0% {
+        filter: hue-rotate(270deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
+
+    100% {
+        filter: hue-rotate(270deg);
+    }
+}
+
+@keyframes boxflow {
+    0% {
+        transform: translateY(-20%) translateX(5%);
+    }
+
+    50% {
+        transform: translateY(25%) translateX(-10%);
+    }
+
+    75% {
+        transform: translateY(-2%) translateX(10%);
+    }
+
+    100% {
+        transform: translateY(15%) translateX(-20%);
+    }
+}

@@ -1,0 +1,847 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap");
+.base-headers, h10, h9, h8, h7, h6, h5, h4, h3, h2, h1 {
+  color: white;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.5vw;
+  color: white;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 2.5vw;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+h3 {
+  font-size: 3.5vw;
+}
+
+h4 {
+  font-size: 4vw;
+}
+
+h5 {
+  font-size: 4.5vw;
+}
+
+h6 {
+  font-size: 5vw;
+}
+
+h7 {
+  font-size: 5.5vw;
+}
+
+h8 {
+  font-size: 6vw;
+}
+
+h9 {
+  font-size: 6.5vw;
+}
+
+h10 {
+  font-size: 7vw;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
+    border-image-slice: 20%;
+    box-shadow: #8c00ff 0px 2px 12px -12px inset, #8c00ff 0px 3px 30px 0px;
+  }
+  50% {
+    border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
+    border-image-slice: 20%;
+    box-shadow: #1500ff 0px 2px 7px -12px inset, #1500ff 0px 3px 30px 0px;
+  }
+  100% {
+    border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
+    border-image-slice: 20%;
+    box-shadow: #2c90fc 0px 2px 15px -18px inset, #2c90fc 0px 3px 30px 0px;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    -o-border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
+       border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
+    border-image-slice: 20%;
+    box-shadow: #8c00ff 0px 2px 12px -12px inset, #8c00ff 0px 3px 30px 0px;
+  }
+  50% {
+    -o-border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
+       border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
+    border-image-slice: 20%;
+    box-shadow: #1500ff 0px 2px 7px -12px inset, #1500ff 0px 3px 30px 0px;
+  }
+  100% {
+    -o-border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
+       border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
+    border-image-slice: 20%;
+    box-shadow: #2c90fc 0px 2px 15px -18px inset, #2c90fc 0px 3px 30px 0px;
+  }
+}
+@-webkit-keyframes rainbow_text {
+  0% {
+    color: #2c90fc;
+    text-shadow: 0px 3px 10px #8c00ff;
+  }
+  50% {
+    color: #8c00ff;
+    text-shadow: 0px 3px 10px #1500ff;
+  }
+  100% {
+    color: #1500ff;
+    text-shadow: 0px 3px 10px #2c90fc;
+  }
+}
+@keyframes rainbow_text {
+  0% {
+    color: #2c90fc;
+    text-shadow: 0px 3px 10px #8c00ff;
+  }
+  50% {
+    color: #8c00ff;
+    text-shadow: 0px 3px 10px #1500ff;
+  }
+  100% {
+    color: #1500ff;
+    text-shadow: 0px 3px 10px #2c90fc;
+  }
+}
+@-webkit-keyframes rainbow_inset {
+  0% {
+    box-shadow: inset 0px 0px 550px #380066;
+  }
+  50% {
+    box-shadow: inset 0px 0px 1550px #080066;
+  }
+  100% {
+    box-shadow: inset 0px 0px 1750px #036ad8;
+  }
+}
+@keyframes rainbow_inset {
+  0% {
+    box-shadow: inset 0px 0px 550px #380066;
+  }
+  50% {
+    box-shadow: inset 0px 0px 1550px #080066;
+  }
+  100% {
+    box-shadow: inset 0px 0px 1750px #036ad8;
+  }
+}
+@-webkit-keyframes rainbow_outset {
+  0% {
+    box-shadow: 0px 0px 10px #380066;
+  }
+  50% {
+    box-shadow: 0px 0px 10px #080066;
+  }
+  100% {
+    box-shadow: 0px 0px 10px #036ad8;
+  }
+}
+@keyframes rainbow_outset {
+  0% {
+    box-shadow: 0px 0px 10px #380066;
+  }
+  50% {
+    box-shadow: 0px 0px 10px #080066;
+  }
+  100% {
+    box-shadow: 0px 0px 10px #036ad8;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes jiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(-12deg);
+  }
+}
+@keyframes jiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(-12deg);
+  }
+}
+@-webkit-keyframes boxcolor {
+  0% {
+    filter: hue-rotate(270deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(270deg);
+  }
+}
+@keyframes boxcolor {
+  0% {
+    filter: hue-rotate(270deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(270deg);
+  }
+}
+@-webkit-keyframes boxflow {
+  0% {
+    transform: translateY(-20%) translateX(5%);
+  }
+  50% {
+    transform: translateY(25%) translateX(-10%);
+  }
+  75% {
+    transform: translateY(-2%) translateX(10%);
+  }
+  100% {
+    transform: translateY(15%) translateX(-20%);
+  }
+}
+@keyframes boxflow {
+  0% {
+    transform: translateY(-20%) translateX(5%);
+  }
+  50% {
+    transform: translateY(25%) translateX(-10%);
+  }
+  75% {
+    transform: translateY(-2%) translateX(10%);
+  }
+  100% {
+    transform: translateY(15%) translateX(-20%);
+  }
+}
+.base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
+  color: white;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.5vw;
+  color: white;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 2.5vw;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+h3 {
+  font-size: 3.5vw;
+}
+
+h4 {
+  font-size: 4vw;
+}
+
+h5 {
+  font-size: 4.5vw;
+}
+
+h6 {
+  font-size: 5vw;
+}
+
+h7 {
+  font-size: 5.5vw;
+}
+
+h8 {
+  font-size: 6vw;
+}
+
+h9 {
+  font-size: 6.5vw;
+}
+
+h10 {
+  font-size: 7vw;
+}
+
+@keyframes rainbow {
+  0% {
+    -o-border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
+       border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
+    border-image-slice: 20%;
+    box-shadow: #8c00ff 0px 2px 12px -12px inset, #8c00ff 0px 3px 30px 0px;
+  }
+  50% {
+    -o-border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
+       border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
+    border-image-slice: 20%;
+    box-shadow: #1500ff 0px 2px 7px -12px inset, #1500ff 0px 3px 30px 0px;
+  }
+  100% {
+    -o-border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
+       border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
+    border-image-slice: 20%;
+    box-shadow: #2c90fc 0px 2px 15px -18px inset, #2c90fc 0px 3px 30px 0px;
+  }
+}
+@keyframes rainbow_text {
+  0% {
+    color: #2c90fc;
+    text-shadow: 0px 3px 10px #8c00ff;
+  }
+  50% {
+    color: #8c00ff;
+    text-shadow: 0px 3px 10px #1500ff;
+  }
+  100% {
+    color: #1500ff;
+    text-shadow: 0px 3px 10px #2c90fc;
+  }
+}
+@keyframes rainbow_inset {
+  0% {
+    box-shadow: inset 0px 0px 550px #380066;
+  }
+  50% {
+    box-shadow: inset 0px 0px 1550px #080066;
+  }
+  100% {
+    box-shadow: inset 0px 0px 1750px #036ad8;
+  }
+}
+@keyframes rainbow_outset {
+  0% {
+    box-shadow: 0px 0px 10px #380066;
+  }
+  50% {
+    box-shadow: 0px 0px 10px #080066;
+  }
+  100% {
+    box-shadow: 0px 0px 10px #036ad8;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes jiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(-12deg);
+  }
+}
+@keyframes boxcolor {
+  0% {
+    filter: hue-rotate(270deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(270deg);
+  }
+}
+@keyframes boxflow {
+  0% {
+    transform: translateY(-20%) translateX(5%);
+  }
+  50% {
+    transform: translateY(25%) translateX(-10%);
+  }
+  75% {
+    transform: translateY(-2%) translateX(10%);
+  }
+  100% {
+    transform: translateY(15%) translateX(-20%);
+  }
+}
+.base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
+  color: white;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.5vw;
+  color: white;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 2.5vw;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+h3 {
+  font-size: 3.5vw;
+}
+
+h4 {
+  font-size: 4vw;
+}
+
+h5 {
+  font-size: 4.5vw;
+}
+
+h6 {
+  font-size: 5vw;
+}
+
+h7 {
+  font-size: 5.5vw;
+}
+
+h8 {
+  font-size: 6vw;
+}
+
+h9 {
+  font-size: 6.5vw;
+}
+
+h10 {
+  font-size: 7vw;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  min-height: 390px;
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  z-index: 1;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body, html {
+  scroll-behavior: smooth;
+}
+
+.disSelection, #headerbanner > #contact-button, #headerbanner > #projects-button, #headerbanner > #aboutme-button, #headerbanner > a > #logo {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+.hidden {
+  filter: opacity(0%);
+  flex-basis: 0%;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+}
+
+.show {
+  width: 300px;
+  height: 190px;
+  filter: opacity(100%);
+  display: flex;
+  transition: 0s;
+  box-shadow: 0px 3px 5px black;
+}
+.show:hover {
+  transform: scaleY(1.15) scaleX(1.15);
+  margin: 0;
+  transition: 0s;
+  filter: saturate(150%);
+  box-shadow: 0px 4px 8px black;
+}
+
+.imgviewer {
+  transform: scaleY(1.45) scaleX(1.45);
+  top: 5%;
+  margin: 0;
+  overflow-x: auto;
+  box-shadow: 0px 3px 5px black;
+}
+
+#headerbanner {
+  width: 105%;
+  min-width: 3%;
+  height: 10%;
+  min-height: 3vh;
+  max-height: 30vh;
+  top: -0.5%;
+  margin-left: -1vw;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  background-color: #222222;
+  border: 0.2px solid;
+  box-shadow: 1px 3px 10px black, 1px 1px 10px black;
+  z-index: 110;
+  overflow: hidden;
+  -webkit-animation: rainbow 2s;
+          animation: rainbow 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+#headerbanner > a {
+  margin-right: 2%;
+  margin-left: 8%;
+  text-decoration: none;
+}
+#headerbanner > a > #logo {
+  width: 20%;
+  min-width: 20px;
+  height: 20%;
+  min-height: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  order: 1;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2%;
+  margin-left: 8%;
+  font-size: 3vw;
+  -webkit-animation: rainbow_text 10s;
+          animation: rainbow_text 10s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+@media all and (max-width: 57.5rem) {
+  #headerbanner > a > #logo {
+    font-size: 6vw;
+    width: 0%;
+    height: 100%;
+    margin: 0;
+    left: -10%;
+    order: 1;
+    align-content: right;
+    justify-content: center;
+  }
+}
+#headerbanner > #aboutme-button {
+  width: 20%;
+  height: 100%;
+  margin-right: 2%;
+  order: 2;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 87;
+}
+#headerbanner > #aboutme-button > a {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: right;
+  display: flex;
+  position: relative;
+  text-decoration: none;
+}
+#headerbanner > #aboutme-button > a:hover #aboutme-ico {
+  opacity: 0.8;
+  transition: 0.3s;
+  -webkit-animation: jiggle 1s;
+          animation: jiggle 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 1;
+          animation-delay: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+#headerbanner > #aboutme-button > a:hover #aboutme {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+#headerbanner > #aboutme-button > a:active #aboutme-ico {
+  opacity: 0.5;
+}
+#headerbanner > #aboutme-button > a:active #aboutme {
+  opacity: 0.5;
+}
+#headerbanner > #aboutme-button > a > #aboutme-ico {
+  width: 14%;
+  min-width: 50px;
+  height: 18%;
+  min-height: 10.5vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  background-image: url("img/ico/aboutme.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 2.2s;
+}
+@media all and (max-width: 57.5rem) {
+  #headerbanner > #aboutme-button > a > #aboutme-ico {
+    width: 10%;
+    right: 1vw;
+    transition: 0s;
+  }
+}
+#headerbanner > #aboutme-button > a > #aboutme {
+  font-size: 2vw;
+  display: flex;
+  position: relative;
+  margin-left: 4%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 86;
+  transition: 2.2s;
+}
+@media all and (max-width: 57.5rem) {
+  #headerbanner > #aboutme-button > a > #aboutme {
+    display: none;
+  }
+}
+#headerbanner > #projects-button {
+  width: 10%;
+  height: 100%;
+  margin-right: 1%;
+  order: 3;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 87;
+}
+#headerbanner > #projects-button > a {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: right;
+  display: flex;
+  position: relative;
+  text-decoration: none;
+}
+#headerbanner > #projects-button > a:hover #projects-ico {
+  opacity: 0.8;
+  transition: 0.3s;
+  -webkit-animation: jiggle 1s;
+          animation: jiggle 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 1;
+          animation-delay: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+#headerbanner > #projects-button > a:hover #projects {
+  transition: 0s;
+  opacity: 0.8;
+}
+#headerbanner > #projects-button > a:active #projects-ico {
+  opacity: 0.7;
+}
+#headerbanner > #projects-button > a:active #projects {
+  opacity: 0.7;
+}
+#headerbanner > #projects-button > a > #projects-ico {
+  width: 17%;
+  min-width: 50px;
+  height: 18%;
+  min-height: 10.5vh;
+  margin-right: 2%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  background-image: url("img/ico/project.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 2.2s;
+}
+#headerbanner > #projects-button > a > #projects {
+  font-size: 2vw;
+  display: flex;
+  position: relative;
+  margin-left: 4%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 86;
+  transition: 2.2s;
+}
+@media all and (max-width: 57.5rem) {
+  #headerbanner > #projects-button > a > #projects {
+    display: none;
+  }
+}
+#headerbanner > #contact-button {
+  width: 30%;
+  height: 100%;
+  cursor: pointer;
+  order: 4;
+  margin-left: 2%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: relative;
+  z-index: 87;
+}
+#headerbanner > #contact-button > a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+#headerbanner > #contact-button > a:hover #contact-ico {
+  opacity: 0.8;
+  transition: 0.3s;
+  -webkit-animation: jiggle 1s;
+          animation: jiggle 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 1;
+          animation-delay: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+#headerbanner > #contact-button > a:hover #contact {
+  transition: 0s;
+  opacity: 0.8;
+}
+#headerbanner > #contact-button > a:active #contact-ico {
+  opacity: 0.7;
+}
+#headerbanner > #contact-button > a:active #contact {
+  opacity: 0.7;
+}
+#headerbanner > #contact-button > a > #contact-ico {
+  width: 6%;
+  min-width: 47px;
+  height: 10%;
+  min-height: 10.5vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  background-image: url("img/ico/mail.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 86;
+  transition: 2.2s;
+}
+#headerbanner > #contact-button > a > #contact {
+  font-size: 2vw;
+  display: flex;
+  position: relative;
+  margin-left: 4%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 86;
+  transition: 2.2s;
+}
+@media all and (max-width: 57.5rem) {
+  #headerbanner > #contact-button > a > #contact {
+    display: none;
+  }
+}/*# sourceMappingURL=header-banner.css.map */

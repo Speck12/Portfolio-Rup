@@ -12,8 +12,6 @@ window.addEventListener("scroll", function(e) {
     var scrolled = window.pageYOffset;
     var rate = scrolled * .4;
 
-    console.log(rate);
-
     target1.style.transform = 'translate3d(0px, -' + rate + 'px, 0px) rotate('+ .0015 * rate +'deg)';
 
     rate = scrolled * .2;

@@ -75,12 +75,16 @@ body, html {
 }
 
 .imgviewer {
-    width: 500px;
-    height: 280px;
+    width: 600px;
+    height: 380px;
+
+    transform: scaleY(1.3) scaleX(1.3);
+
     top: 4%;
     margin: 0;
     display: flex;
     overflow-x: auto;
+    overflow-y: auto;
     box-shadow: 0px 3px 5px black;
 
     overflow:auto;
@@ -100,21 +104,30 @@ body, html {
         flex-direction: column;
         position: absolute;
 
-        * {
-            font-size: 15px;
+        h1 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 24px;
             margin: 0;
+
+            color: white;
 
             cursor: auto;
             
             & > a {
+                font-size: 24px;
                 text-decoration: none;
 
-                cursor: pointer;
+                transition: 3s;
 
                 color: white;
 
+                cursor: pointer;
+
                 &:hover {
-                    filter:opacity(80%);
+                    @include rainbow_text;
                 }
 
                 &:active {

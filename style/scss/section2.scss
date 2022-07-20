@@ -16,11 +16,10 @@ section2 {
 }
 
 #sb1 {
-    width: 110vw;
+    width: 100%;
     height: 160vh;
 
     top: 230vh;
-    right: 2%;
 
     position: absolute;
     display:flex;
@@ -30,18 +29,17 @@ section2 {
 
     align-content: center;
 
-    overflow:hidden;
+    overflow:auto;
 
     background-color: $primary-color;
     box-shadow: $shadow-normal;
 
-    transform: rotate(.5deg);
     z-index: 100;
 
     @include rainbow;
 
     & > h5 {
-        width: 95.5%;
+        width: 1500px;
         height: 10%;
 
         top: 15%;
@@ -61,14 +59,12 @@ section2 {
 
         flex-wrap: nowrap;
         flex-direction: row;
+        flex-basis: 93%;
 
         z-index: 101;
-        transform: rotate(-.5deg);
 
         @include media-down('md'){
             font-size: 6vh;
-            margin-left: 10%;
-            margin-right: 12%;
         }
     }
 
@@ -76,8 +72,7 @@ section2 {
         width: 1500px;
         height: 80%;
 
-        top: 17%;
-        left: 2%;
+        top: 15%;
 
         margin-left: 13%;
         margin-right: 20%;
@@ -96,7 +91,9 @@ section2 {
         
         overflow:hidden;
 
-        transform: rotate(-.5deg);
+        @include media-down('md'){
+            top: 12%;
+        }
 
         & > p {
             font-size: 32px;

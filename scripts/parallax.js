@@ -12,6 +12,12 @@ window.addEventListener("scroll", function(e) {
     var scrolled = window.pageYOffset;
     var rate = scrolled * .4;
 
+    // disabling imageviewer for devices with a width under 1000px
+    if (window.screen.width <= 700) {
+        target5.style.transform = 'translate3d(0px, -' + rate + 'px, 0px)';
+        return
+    }
+
     target1.style.transform = 'translate3d(0px, -' + rate + 'px, 0px) rotate('+ .0015 * rate +'deg)';
 
     rate = scrolled * .2;

@@ -55,17 +55,17 @@ h10 {
 @-webkit-keyframes rainbow {
   0% {
     border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
-    border-image-slice: 20%;
+    border-image-slice: 10%;
     box-shadow: #8c00ff 0px 2px 12px -12px inset, #8c00ff 0px 3px 30px 0px;
   }
   50% {
     border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
-    border-image-slice: 20%;
+    border-image-slice: 10%;
     box-shadow: #1500ff 0px 2px 7px -12px inset, #1500ff 0px 3px 30px 0px;
   }
   100% {
     border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
-    border-image-slice: 20%;
+    border-image-slice: 10%;
     box-shadow: #2c90fc 0px 2px 15px -18px inset, #2c90fc 0px 3px 30px 0px;
   }
 }
@@ -74,19 +74,19 @@ h10 {
   0% {
     -o-border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
        border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
-    border-image-slice: 20%;
+    border-image-slice: 10%;
     box-shadow: #8c00ff 0px 2px 12px -12px inset, #8c00ff 0px 3px 30px 0px;
   }
   50% {
     -o-border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
        border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
-    border-image-slice: 20%;
+    border-image-slice: 10%;
     box-shadow: #1500ff 0px 2px 7px -12px inset, #1500ff 0px 3px 30px 0px;
   }
   100% {
     -o-border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
        border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
-    border-image-slice: 20%;
+    border-image-slice: 10%;
     box-shadow: #2c90fc 0px 2px 15px -18px inset, #2c90fc 0px 3px 30px 0px;
   }
 }

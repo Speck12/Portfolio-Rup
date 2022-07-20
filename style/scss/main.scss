@@ -6,7 +6,8 @@
 
 body {
     width: 100%;
-    min-width: 320px;  
+    min-width: 320px;
+    max-width: 100vw;
     height: 100%;
     min-height: 390px;  
     
@@ -14,8 +15,6 @@ body {
     padding: 0;
 
     background-color: $primary-color;
-
-    overflow-x: hidden;
     
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -89,7 +88,9 @@ body, html {
 
     overflow:auto;
 
-    & > span {
+    z-index: 110;
+
+    & > span::before {
 
         width: 100%;
         height: 30%;
@@ -104,12 +105,17 @@ body, html {
         flex-direction: column;
         position: absolute;
 
+        transition: 0s;
+
+        z-index: 109;
+
         h1 {
-            font-size: 18px;
+            font-size: 22px;
+            z-index: 109;
         }
 
         p {
-            font-size: 24px;
+            font-size: 16px;
             margin: 0;
 
             color: white;
@@ -135,5 +141,25 @@ body, html {
                 }
             }
         }
+    }
+
+    & > span::after {
+
+        width: 100%;
+        height: 30%;
+
+        right: 120%;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        transition: 0s;
+
+        z-index: 109;
     }
 }

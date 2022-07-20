@@ -11,7 +11,6 @@ var Drag = function(e){
     if (eventtarget.tagName != "SPAN" ) {return}
 
     console.log(eventtarget);
-    
 }
 
 for (var i = 1; i < elem.length; i++) {

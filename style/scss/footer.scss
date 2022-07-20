@@ -2,11 +2,10 @@
 @import "mixin/animation", "mixin/breakpoint", "mixin/main", "animation", "main";
 
 #footer-banner {
-    width: 105%;
-    height: 35vh;
+    width: 109.5vw;
+    height: 32vh;
 
     top: 750vh;
-    margin-left: -1vw;
 
     position: absolute;
     display: flex;
@@ -27,7 +26,7 @@
     @include rainbow;
 
     @include media-down('md'){
-        height: 18vh;
+        height: 22vh;
     }
 
     & div {
@@ -69,6 +68,11 @@
             & > a {
                 text-decoration: none;
                 color: white;
+
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                word-break: break-word;
+                overflow: hidden;
 
                 &:hover {
                     opacity: 0.7;

@@ -14,7 +14,7 @@ var ImgViewer = function(e) {
     // the clicked target
     let eventtarget = e.target || e.srcElement;
 
-    // disabling imageviewer for devices with a width under 800px
+    // disabling imageviewer for devices with a width under 1000px
     if (window.screen.width <= 1000) {return}
     
     if (eventtarget.tagName != "DIV" ) {return}
@@ -42,7 +42,7 @@ var BlendOut = function(e) {
     // the clicked target
     let eventtarget = e.target || e.srcElement;
 
-    // disabling blendout for devices with a width under 800px
+    // disabling blendout for devices with a width under 1000px
     if (window.screen.width <= 1000) {return}
 
     console.log(window.screen.width);

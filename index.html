@@ -30,6 +30,7 @@
 <body>
 
 	<header>
+
 		<div id="headerbanner">
 			<a href="#sb0">
 				<h7 id="logo" alt="logo">PORTFOLIO</h7>
@@ -55,14 +56,15 @@
 					<h1 id="contact">Contact</h1>
 				</a>
 			</div>
-
 		</div>
+
     </header>
 
 	<main>
 
+		<div class="bu"></div>
 		<div id="sb0"></div>
-        <section1 class="container">
+        <section1 data-scrollbar class="container">
 				<div id="par1" alt="parallax-layer"></div>
 				<div id="par2" alt="parallax-layer"></div>
 				<div id="par3" alt="parallax-layer"></div>
@@ -72,34 +74,78 @@
 					<h5>I am</h5>
 					<h6 class="auto-type1"></h6>
 				</div>
-        </section1>
+		</section1>
 
-		<section2 class="container">
+		<section2 data-scrollbar class="container">
 			<div id="sb1" class="section-box">
-				<h5 id="aboutmeheader" class="auto-type2"></h5>
+
 				<span>
-					<p>Lorem Ipsum is the single greatest threat. <br> We are not - we are not keeping up with other websites. <br>Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. <br>Does everybody know that pig named Lorem Ipsum? <br>An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.</p>
+					<h10 id="aboutmeheader1" style="--ah:1">ME</h10>
+					<h10 id="aboutmeheader2" style="--ah:2">ABOUT</h10>
+					<h5 id="aboutmeheader3" style="--ah:3">ABOUT ME</h5>
 				</span>
+
+				<div id="skills" class="container">
+
+					<div class="loader">
+
+						<span style="--z:10" class="dragbox ue"><h3>DATA:</h3></span>
+						<span style="--z:9" class="dragbox us"><h2>Name: Nico</h2></span>
+						<span style="--z:8" class="dragbox us"><h2>Age: 18</h2></span>
+						<span style="--z:7" class="dragbox us"><h2>From: Germany</h2></span>
+						<span style="--z:6" class="dragbox ue"><h3>SKILLS:</h3><h3 id="knowledge">STATUS:</h3></span>
+
+						<span style="--z:5" class="dragbox pointer us skill" id="skillblock1">
+							<h2>HTML & CSS (SASS)</h2>
+							<div>
+								<div>
+									<div id="loadingbar1"><p>100%</p></div>
+								</div>
+							</div>
+						</span>
+						<span style="--z:4" class="dragbox pointer us skill" id="skillblock2">
+							<h2>JavaScript</h2>
+							<div>
+								<div>
+									<div id="loadingbar2"><p>30%</p></div>
+								</div>
+							</div>
+						</span>
+						<span style="--z:3" class="dragbox pointer us skill" id="skillblock3">
+							<h2>Lua</h2>
+							<div>
+								<div>
+									<div id="loadingbar3"><p>60%</p></div>
+								</div>
+							</div>
+						</span>
+						<span style="--z:2" class="dragbox pointer us skill" id="skillblock4">
+							<h2>SQL</h2>
+							<div>
+								<div>
+									<div id="loadingbar4"><p>50%</p></div>
+								</div>
+							</div>
+						</span>
+						<span style="--z:1" class="dragbox pointer us skill" id="skillblock5">
+							<h2>Design</h2>
+							<div>
+								<div>
+									<div id="loadingbar5"><p>80%</p></div>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
 			</div>
 		</section2>
 
-		<section3 class="container">
+		<section3 data-scrollbar class="container">
 			<div id="bg1">
-				<div class="loader">
-					<span style="--z:10" class="dragbox"><h2>PLANNING</h2></span>
-					<span style="--z:9" class="dragbox"><h2>PROGRAMMING</h2></span>
-					<span style="--z:8" class="dragbox"><h2>IMPLEMENTATION</h2></span>
-					<span style="--z:7" class="dragbox"><h2>ANALYZE</h2></span>
-					<span style="--z:6" class="dragbox"><h2>DESIGN</h2></span>
-					<span style="--z:5" class="dragbox"><h2>TESTING</h2></span>
-					<span style="--z:4" class="dragbox"><h2>DEVELOPMENT</h2></span>
-					<span style="--z:3" class="dragbox"><h2>VALIDATION</h2></span>
-					<span style="--z:2" class="dragbox"><h2>VERIFICATION</h2></span>
-					<span style="--z:1" class="dragbox"><h2>SHIPPING</h2></span>
-				</div>
+				
 			</div>
 			
-		</section3>
+		</section3 data-scrollbar>
 
 		<section4>
 			<div id="sb2" class="section-box">
@@ -109,10 +155,13 @@
 					
 					<div id = "proj12" class="p show" style="--p:12">
 					<span>
-						<h1>Ein Werbeflyer angefertigt, innerhalb <br> eines halbjährigen FOS-Praktikums, für QFact GmbH.</h1>
+						<h1>Beschreibung:</h1>
+						<p>Ein Werbeflyer angefertigt, innerhalb eines <br>FOS-Praktikums, für QFact GmbH.</p>
 						<br>
-						<h1><a href="https://www.qfact.de/" target="_blank">[ qfact.de ]</a></h1>
-						<h1><a href="https://fos-bos-weilheim.de/" target="_blank">[ fos-bos-weilheim.de ]</a></h1>
+						<h1>Links:</h1>
+						<p id="download"><a href="/material/pdf/Qfact-Flyer.pdf" target="_blank">[ download .pdf ]</a></p>
+						<p><a href="https://www.qfact.de/" target="_blank">[ qfact.de ]</a></p>
+						<p><a href="https://fos-bos-weilheim.de/" target="_blank">[ fos-bos-weilheim.de ]</a></p>
 					</span>
 					</div>
 					<div id = "proj11" class="p show" style="--p:11">
@@ -173,26 +222,31 @@
 				</span>
 			</div>
 		</section4>
-    </main>
+	</main>
 
-	<footer>
+	<footer data-scrollbar>
 		<div id="footer-banner">
 			<div id="contact-footer">
 				<h1>Contact</h1>
 				<p>E-Mail:   <a href="mailto: nicolas.ruprecht@web.de">nicolas.ruprecht@web.de</a></p>
 			</div>
 			<div>
-				<h1></h1>
+				<h1>Repository</h1>
+				<p>Github:   <a href="https://github.com/Speck12/Portfolio-Rup" target="_blank">https://github.com/Speck12/Portfolio-Rup</a></p>
 			</div>
 		</div>
-    </footer>
+	</footer>
 
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	<script src="scripts/typed_text.js"></script>
+
+	<script src="scripts/smoothmousewheel.js"></script>
 	<script src="scripts/main.js"></script>
 	<script src="scripts/parallax.js"></script>
 	<script src="scripts/header.js"></script>
+	<script src="scripts/movingboxes.js"></script>
+	<script src="scripts/projects.js"></script>
 
 </body>
 

@@ -4,9 +4,14 @@
 // CSS-Imports
 @import "animation", "font";
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
-    min-width: 320px;  
+    min-width: 320px;
+    max-width: 100vw;
     height: 100%;
     min-height: 390px;  
     
@@ -15,12 +20,10 @@ body {
 
     background-color: $primary-color;
 
-    overflow-x: hidden;
+    z-index: 1;
     
     -ms-overflow-style: none;
     scrollbar-width: none;
-
-    z-index: 1;
 
     &::-webkit-scrollbar {
         display: none;
@@ -37,6 +40,18 @@ body, html {
     -moz-user-select: none;
     user-select: none;
     // using => @extend .disSelection;
+}
+
+.pointer {
+    cursor:pointer;
+}
+
+.ue {
+    filter:brightness(120%);
+}
+
+.us {
+    filter:brightness(130%);
 }
 
 .hidden {
@@ -75,17 +90,23 @@ body, html {
 }
 
 .imgviewer {
-    width: 500px;
-    height: 280px;
+    width: 600px;
+    height: 380px;
+
+    transform: scaleY(1.3) scaleX(1.3);
+
     top: 4%;
     margin: 0;
     display: flex;
     overflow-x: auto;
+    overflow-y: auto;
     box-shadow: 0px 3px 5px black;
 
     overflow:auto;
 
-    & > span {
+    z-index: 110;
+
+    & > span::before {
 
         width: 100%;
         height: 30%;
@@ -100,21 +121,35 @@ body, html {
         flex-direction: column;
         position: absolute;
 
-        * {
-            font-size: 15px;
+        transition: 0s;
+
+        z-index: 109;
+
+        h1 {
+            font-size: 22px;
+            z-index: 109;
+        }
+
+        p {
+            font-size: 16px;
             margin: 0;
+
+            color: white;
 
             cursor: auto;
             
             & > a {
+                font-size: 24px;
                 text-decoration: none;
 
-                cursor: pointer;
+                transition: 3s;
 
                 color: white;
 
+                cursor: pointer;
+
                 &:hover {
-                    filter:opacity(80%);
+                    @include rainbow_text;
                 }
 
                 &:active {
@@ -122,5 +157,25 @@ body, html {
                 }
             }
         }
+    }
+
+    & > span::after {
+
+        width: 100%;
+        height: 30%;
+
+        right: 120%;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        transition: 0s;
+
+        z-index: 109;
     }
 }

@@ -2,11 +2,10 @@
 @import "mixin/animation", "mixin/breakpoint", "mixin/main", "animation", "main";
 
 #footer-banner {
-    width: 105%;
-    height: 35vh;
+    width: 109.5vw;
+    height: 32vh;
 
     top: 750vh;
-    margin-left: -1vw;
 
     position: absolute;
     display: flex;
@@ -27,15 +26,15 @@
     @include rainbow;
 
     @include media-down('md'){
-        height: 18vh;
+        height: 22vh;
     }
 
     & div {
-        width: 30%;
+        width: 38%;
         height: 80%;
 
         @include media-down('md'){
-            width: 40%;
+            width: 45%;
         }
 
         flex-direction: column;
@@ -49,6 +48,7 @@
         & > h1 {
             margin: 0;
             margin-top: 15%;
+            font-size: 38px;
 
             @include media-down('md'){
                 font-size: 18px;
@@ -56,6 +56,8 @@
         }
 
         & > p {
+
+            font-size: 25px;
 
             @include media-down('md'){
                 font-size: 13px;
@@ -66,6 +68,11 @@
             & > a {
                 text-decoration: none;
                 color: white;
+
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                word-break: break-word;
+                overflow: hidden;
 
                 &:hover {
                     opacity: 0.7;

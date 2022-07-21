@@ -44,7 +44,7 @@ section4 {
         width: 95.5%;
         height: 10%;
 
-        padding-top: 5vh;
+        padding-top: 6vh;
 
         justify-content: center;
         align-content: center;
@@ -59,24 +59,24 @@ section4 {
 
         flex-wrap: wrap;
         flex-direction: row;
-        flex-basis: 90%;
+        flex-basis: 91.5%;
 
         z-index: 111;
 
         @include media-down('md'){
             font-size: 6vh;
-            margin-left: 10%;
-            margin-right: 12%;
+            top: 5%;
         }
     }
 
     & > span {
         width: 120%;
-        height: 60%;
+        height: 59%;
 
         margin-left: 11%;
         margin-right: 20%;
         margin-bottom: 2%;
+        margin-top: 5%;
         
         display: flex;
         position: relative;
@@ -87,8 +87,17 @@ section4 {
         flex-flow: row wrap;
 
         overflow-x: visible;
+        overflow-y: auto;
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         @include media-down('md'){
+            top: 5%;
             overflow: auto;
             height: 60%;
             margin-right: 18%;

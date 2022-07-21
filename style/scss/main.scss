@@ -4,6 +4,10 @@
 // CSS-Imports
 @import "animation", "font";
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
     min-width: 320px;
@@ -15,11 +19,11 @@ body {
     padding: 0;
 
     background-color: $primary-color;
+
+    z-index: 1;
     
     -ms-overflow-style: none;
     scrollbar-width: none;
-
-    z-index: 1;
 
     &::-webkit-scrollbar {
         display: none;
@@ -36,6 +40,18 @@ body, html {
     -moz-user-select: none;
     user-select: none;
     // using => @extend .disSelection;
+}
+
+.pointer {
+    cursor:pointer;
+}
+
+.ue {
+    filter:brightness(120%);
+}
+
+.us {
+    filter:brightness(130%);
 }
 
 .hidden {

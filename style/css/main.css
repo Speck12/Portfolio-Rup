@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400;1,500;1,700&display=swap");
 .base-headers, h10, h9, h8, h7, h6, h5, h4, h3, h2, h1 {
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 400;
 }
 
 p {
   font-size: 1.5vw;
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 200;
 }
 
@@ -56,17 +58,17 @@ h10 {
 @-webkit-keyframes rainbow {
   0% {
     border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
-    border-image-slice: 50%;
+    border-image-slice: 10%;
     box-shadow: #8c00ff 0px 2px 12px -12px inset, #8c00ff 0px 3px 30px 0px;
   }
   50% {
     border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
-    border-image-slice: 50%;
-    box-shadow: #2c90fc 0px 2px 7px -12px inset, #2c90fc 0px 3px 30px 0px;
+    border-image-slice: 10%;
+    box-shadow: #1500ff 0px 2px 7px -12px inset, #1500ff 0px 3px 30px 0px;
   }
   100% {
     border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
-    border-image-slice: 50%;
+    border-image-slice: 10%;
     box-shadow: #2c90fc 0px 2px 15px -18px inset, #2c90fc 0px 3px 30px 0px;
   }
 }
@@ -75,48 +77,66 @@ h10 {
   0% {
     -o-border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
        border-image: linear-gradient(to bottom right, #2c90fc 0%, #1500ff 50%, #8c00ff 100%);
-    border-image-slice: 50%;
+    border-image-slice: 10%;
     box-shadow: #8c00ff 0px 2px 12px -12px inset, #8c00ff 0px 3px 30px 0px;
   }
   50% {
     -o-border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
        border-image: linear-gradient(to bottom right, #1500ff 0%, #8c00ff 50%, #2c90fc 100%);
-    border-image-slice: 50%;
-    box-shadow: #2c90fc 0px 2px 7px -12px inset, #2c90fc 0px 3px 30px 0px;
+    border-image-slice: 10%;
+    box-shadow: #1500ff 0px 2px 7px -12px inset, #1500ff 0px 3px 30px 0px;
   }
   100% {
     -o-border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
        border-image: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 50%, #8c00ff 100%);
-    border-image-slice: 50%;
+    border-image-slice: 10%;
     box-shadow: #2c90fc 0px 2px 15px -18px inset, #2c90fc 0px 3px 30px 0px;
   }
 }
 @-webkit-keyframes rainbow_text {
   0% {
-    color: #2c90fc;
+    background: #8c00ff;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #8c00ff;
   }
   50% {
-    color: #8c00ff;
-    text-shadow: 0px 3px 10px #2c90fc;
+    background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 3px 10px #1500ff;
   }
   100% {
-    color: #2c90fc;
-    text-shadow: 0px 3px 10px #8c00ff;
+    background: #2c90fc;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 3px 10px #2c90fc;
   }
 }
 @keyframes rainbow_text {
   0% {
-    color: #2c90fc;
+    background: #8c00ff;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #8c00ff;
   }
   50% {
-    color: #8c00ff;
-    text-shadow: 0px 3px 10px #2c90fc;
+    background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 3px 10px #1500ff;
   }
   100% {
-    color: #2c90fc;
-    text-shadow: 0px 3px 10px #8c00ff;
+    background: #2c90fc;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 3px 10px #2c90fc;
   }
 }
 @-webkit-keyframes rainbow_inset {
@@ -181,10 +201,10 @@ h10 {
 }
 @-webkit-keyframes jiggle {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(12deg);
   }
   0% {
-    transform: rotate(12deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(-12deg);
@@ -192,10 +212,10 @@ h10 {
 }
 @keyframes jiggle {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(12deg);
   }
   0% {
-    transform: rotate(12deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(-12deg);
@@ -225,30 +245,30 @@ h10 {
 }
 @-webkit-keyframes boxflow {
   0% {
-    transform: translateY(-20%) translateX(5%);
+    transform: translateY(-5%) translateX(6%);
   }
   50% {
-    transform: translateY(25%) translateX(-10%);
+    transform: translateY(10%) translateX(-10%);
   }
   75% {
-    transform: translateY(-2%) translateX(10%);
+    transform: translateY(-20%) translateX(2%);
   }
   100% {
-    transform: translateY(15%) translateX(-20%);
+    transform: translateY(15%) translateX(-5%);
   }
 }
 @keyframes boxflow {
   0% {
-    transform: translateY(-20%) translateX(5%);
+    transform: translateY(-5%) translateX(6%);
   }
   50% {
-    transform: translateY(25%) translateX(-10%);
+    transform: translateY(10%) translateX(-10%);
   }
   75% {
-    transform: translateY(-2%) translateX(10%);
+    transform: translateY(-20%) translateX(2%);
   }
   100% {
-    transform: translateY(15%) translateX(-20%);
+    transform: translateY(15%) translateX(-5%);
   }
 }
 @-webkit-keyframes gradient {
@@ -273,16 +293,48 @@ h10 {
     background-position: 0% 50%;
   }
 }
+@-webkit-keyframes ue {
+  0% {
+    text-shadow: 6px 1px 3px #333333, 0px 3px 10px #8c00ff;
+  }
+  50% {
+    text-shadow: 4px 1px 3px #333333;
+  }
+  100% {
+    text-shadow: 8px 1px 3px #333333;
+  }
+}
+@keyframes ue {
+  0% {
+    text-shadow: 6px 1px 3px #333333, 0px 3px 10px #8c00ff;
+  }
+  50% {
+    text-shadow: 4px 1px 3px #333333;
+  }
+  100% {
+    text-shadow: 8px 1px 3px #333333;
+  }
+}
+@-webkit-keyframes dis_ue {
+  0%, 100% {
+    text-shadow: none;
+  }
+}
+@keyframes dis_ue {
+  0%, 100% {
+    text-shadow: none;
+  }
+}
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 400;
 }
 
 p {
   font-size: 1.5vw;
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 200;
 }
 
@@ -326,6 +378,10 @@ h10 {
   font-size: 7vw;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   min-width: 320px;
@@ -335,9 +391,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #222222;
+  z-index: 1;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  z-index: 1;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -352,6 +408,18 @@ body, html {
   -moz-user-select: none;
   -ms-user-select: none;
       user-select: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.ue {
+  filter: brightness(120%);
+}
+
+.us {
+  filter: brightness(130%);
 }
 
 .hidden {

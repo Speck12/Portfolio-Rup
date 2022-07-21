@@ -23,18 +23,8 @@ var typed = new Typed(".auto-type1", {
     loop: true
 })
 
-var typed = new Typed(".auto-type2", {
-    strings: ["^1000About me^5000"],
-    typeSpeed: 340,
-    backSpeed: 200,
-    startDelay: 0,
-    shuffle: false,
-    showCursor: false,
-    loop: true
-})
-
 var typed = new Typed(".auto-type3", {
-    strings: ["^1000Projects^5000"],
+    strings: ["Projects^5000"],
     typeSpeed: 340,
     backSpeed: 200,
     startDelay: 0,

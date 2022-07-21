@@ -1,6 +1,8 @@
 // Mixins-Import
 @import "mixin/animation", "mixin/breakpoint", "mixin/main", "animation", "main";
 
+$innershadow: lighten(#333333, 20%);
+
 section2 {
     width: 110vw;
     height: 130vh;
@@ -13,11 +15,11 @@ section2 {
     &::-webkit-scrollbar {
         display: none;
     }
-}
+} 
 
 #sb1 {
     width: 100%;
-    height: 160vh;
+    height: 260vh;
 
     top: 230vh;
 
@@ -29,7 +31,7 @@ section2 {
 
     align-content: center;
 
-    overflow:auto;
+    overflow:hidden;
 
     background-color: $primary-color;
     box-shadow: $shadow-normal;
@@ -38,78 +40,332 @@ section2 {
 
     @include rainbow;
 
-    & > h5 {
-        width: 1500px;
-        height: 10%;
-
-        top: 15%;
-
-        text-align: center;
+    & > span {
+        width: 100%;
+        height: 20%;
 
         justify-content: center;
         align-content: center;
         text-align: center;
 
         position: relative;
+
         display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    & > span > h5 {
+        width: 100%;
+        height: 100%;
+
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+
+        position: relative;
 
         margin: 0;
 
-        display:flex;
-
-        flex-wrap: nowrap;
-        flex-direction: row;
-        flex-basis: 93%;
-
-        z-index: 101;
-
-        @include media-down('md'){
-            font-size: 6vh;
-        }
+        z-index: var(--z);
     }
 
-    & > span {
-        width: 1500px;
-        height: 80%;
+    & > span > #aboutmeheader1 {
+        height: 150vh;
 
-        top: 15%;
+        color: rgb(37, 37, 37);
 
-        margin-left: 13%;
-        margin-right: 20%;
+        filter: opacity(83.5%);
 
-        justify-content: center;
-        align-content: center;
+        font-stretch: 250%;
+        font-size: 24vw;
+        font-weight: bold;
 
-        display: inline-flex;
-        position: relative;
+        bottom: 5%;
+        left: -5%;
 
-        text-align: center;
+        white-space: nowrap;
 
-        word-wrap: break-word;
-        white-space: -moz-pre-wrap;
-        white-space: pre-wrap; 
-        
-        overflow:hidden;
+        position: absolute;
 
-        @include media-down('md'){
-            top: 12%;
-        }
+        overflow: hidden;
 
-        & > p {
-            font-size: 32px;
+        @extend .disSelection;
+    }
 
-            width: 100%;
-            height: 100%;
+    & > span > #aboutmeheader2 {
+        height: 150vh;
 
-            flex-wrap: nowrap;
-            flex-direction: row;
-        
-            display: inline-flex;
+        color: rgb(38, 38, 38);
+
+        font-stretch: 250%;
+        font-size: 23vw;
+        font-weight: bold;
+
+        bottom: 175%;
+        left: 35%;
+
+        white-space: nowrap;
+
+        position: absolute;
+
+        overflow: hidden;
+
+        @extend .disSelection;
+    }
+
+    & > span > #aboutmeheader3 {
+        height: 120vh;
+
+        background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        font-stretch: 250%;
+        font-size: 11vw;
+        font-weight: bold;
+
+        bottom:30%;
+        right: 9%;
+
+        white-space: nowrap;
+
+        position: absolute;
+
+        overflow: hidden;
+    }
+
+    & > #skills {
+        width: 100%;
+        height: 100%;
+
+        top: 38%;
+        left: 15%;
+
+        position: absolute;
+        display: flex;
+
+        & > .loader {
+            width: 30vw;
+            height: 600px;
+    
             position: relative;
-            
+            display: flex;
+    
+            flex-direction: column;
+    
+            transform: skewY(15deg) translateX(-20%) translateY(10%);
+    
+            @include boxcolor;
+    
             @include media-down('md'){
-                font-size: 3.4vh;
+                width: 60vw;
+                left: 5%;
+            }
+    
+            & span {
+                width: 400px;
+                height: 60px;
+    
+                position: relative;
+                display: flex;
+    
+                flex-direction: column;
+    
+                background-color: $primary-button-color;
+    
+                transition: .5s;
+    
+                z-index: var(--z);
+
+                box-shadow: inset 0px 0px 5px $primary-color;
+    
+
+                @include boxflow;
+                animation-delay: calc(-.8s * var(--z));
+
+                & > #knowledge {
+                    width: 240px;
+                    height: 100%;
+
+                    bottom: -22%;
+
+                    display: flex;
+                    transform: skewY(-45deg) translateX(400px) translateY(160px);
+                }
+    
+                & > h2 {
+                    width: 100%;
+                    height: 100%;
+
+                    background: linear-gradient(to bottom right, #8322b3 0%, white 50%, #8322b3 100%);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+    
+                    bottom: 15%;
+    
+                    font-size: 30px;
+                    font-weight: 100;
+    
+                    align-items: center;
+                    justify-content: center;
+    
+                    display: flex;
+                    position: relative;
+
+                    text-shadow: 0px 2px 2px $innershadow;
+    
+                    @extend .disSelection;
+                }
+
+                & > h3 {
+                    width: 100%;
+                    height: 100%;
+
+                    background: linear-gradient(to bottom left, #8c00ff 0%, #8322b3 70%, #8c00ff 100%);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+    
+                    bottom: 15%;
+    
+                    font-size: 30px;
+                    font-weight: 600;
+    
+                    align-items: center;
+                    justify-content: center;
+    
+                    display: flex;
+                    position: relative;
+                    
+                    @include ue;
+
+                    @extend .disSelection;
+
+                    :hover {
+                        animation-play-state: paused
+                    }
+                }
+            }
+    
+            & .skill:hover {
+                background: #440ec2;
+                transition: 0s;
+
+                & > h2, h3 {
+                    text-shadow: none;
+                }
+            }
+    
+            & span::before {
+                content: "";
+                position: absolute;
+    
+                top: 0;
+    
+                width: 240px;
+                height: 100%;
+    
+                background: #2e2e2e;
+
+                box-shadow: inset 0px 0px 5px $primary-color;
+    
+                transform-origin: right;
+                transform: skewY(-45deg) translateX(400px) translateY(160px);
+                transition: .5s;
+                
+            }
+
+            & span > div {
+                width: 240px;
+                height: 100%;
+
+                position: absolute;
+                display: flex;
+
+                align-items: center;
+                justify-content: center;
+
+                transform-origin: right;
+                transform: skewY(-45deg) translateX(400px) translateY(160px);
+
+                & > div {
+                    width: 210px;
+                    height: 60%;
+
+                    background-color:#242424;
+                    box-shadow: inset 0px 0px 2px black;
+
+                    & > div {
+                        width: 0px;
+                        height: 53%;
+
+                        margin-left: .5%;
+
+                        align-items: center;
+                        justify-content: center;
+
+                        position: absolute;
+
+                        overflow: hidden;
+
+                        transition: 1s;
+
+                        background-color: darken(blueviolet, 20%);
+                        box-shadow: inset 0px 0px 25px darken(#2c90fc, 15%), 0px 0px 2px darken(#2c90fc, 15%);
+                        
+                        & > p {
+                            width: inherit;
+                            height: 100%;
+
+                            background: linear-gradient(to bottom right, #be96d4 0%, white 20%, white 100%);
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+
+                            bottom: -65%;
+
+                            font-size: 100%;
+
+                            align-items: center;
+                            justify-content: center;
+                            
+                            transition: .2s;
+
+                            display: flex;
+                            position: absolute;
+
+                            @extend .disSelection;
+                        }
+                    }
+                }
+            }
+    
+            & .skill:hover::before {
+                background-color: #25076b;
+                transition: 0s;
+                box-shadow: 0px 0px 20px darken(#2c90fc, 15%);
+            }
+    
+            & span::after {
+                content: "";
+                position: absolute;
+    
+                width: 100%;
+                height: 400%;
+    
+                transform-origin: top;
+                transform: skewX(-45deg) translateY(-240px);
+    
+                background-color: #383838;
+                
+                box-shadow: inset 0px 0px 5px $primary-color;
+                transition: .5s;
+            }
+    
+            & .skill:hover::after {
+                background-color: #390aa6;
+                box-shadow: 0px 0px 20px darken(#2c90fc, 15%);
+                transition: 0s;
             }
         }
-    }
+    }    
 }

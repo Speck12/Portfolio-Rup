@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400;1,500;1,700&display=swap");
 .base-headers, h10, h9, h8, h7, h6, h5, h4, h3, h2, h1 {
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 400;
 }
 
 p {
   font-size: 1.5vw;
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 200;
 }
 
@@ -94,29 +97,47 @@ h10 {
 }
 @-webkit-keyframes rainbow_text {
   0% {
-    color: #2c90fc;
+    background: #8c00ff;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #8c00ff;
   }
   50% {
-    color: #8c00ff;
+    background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #1500ff;
   }
   100% {
-    color: #1500ff;
+    background: #2c90fc;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #2c90fc;
   }
 }
 @keyframes rainbow_text {
   0% {
-    color: #2c90fc;
+    background: #8c00ff;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #8c00ff;
   }
   50% {
-    color: #8c00ff;
+    background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #1500ff;
   }
   100% {
-    color: #1500ff;
+    background: #2c90fc;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #2c90fc;
   }
 }
@@ -182,10 +203,10 @@ h10 {
 }
 @-webkit-keyframes jiggle {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(12deg);
   }
   0% {
-    transform: rotate(12deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(-12deg);
@@ -193,10 +214,10 @@ h10 {
 }
 @keyframes jiggle {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(12deg);
   }
   0% {
-    transform: rotate(12deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(-12deg);
@@ -226,30 +247,30 @@ h10 {
 }
 @-webkit-keyframes boxflow {
   0% {
-    transform: translateY(-20%) translateX(5%);
+    transform: translateY(-5%) translateX(6%);
   }
   50% {
-    transform: translateY(25%) translateX(-10%);
+    transform: translateY(10%) translateX(-10%);
   }
   75% {
-    transform: translateY(-2%) translateX(10%);
+    transform: translateY(-20%) translateX(2%);
   }
   100% {
-    transform: translateY(15%) translateX(-20%);
+    transform: translateY(15%) translateX(-5%);
   }
 }
 @keyframes boxflow {
   0% {
-    transform: translateY(-20%) translateX(5%);
+    transform: translateY(-5%) translateX(6%);
   }
   50% {
-    transform: translateY(25%) translateX(-10%);
+    transform: translateY(10%) translateX(-10%);
   }
   75% {
-    transform: translateY(-2%) translateX(10%);
+    transform: translateY(-20%) translateX(2%);
   }
   100% {
-    transform: translateY(15%) translateX(-20%);
+    transform: translateY(15%) translateX(-5%);
   }
 }
 @-webkit-keyframes gradient {
@@ -274,16 +295,38 @@ h10 {
     background-position: 0% 50%;
   }
 }
+@-webkit-keyframes ue {
+  0% {
+    text-shadow: 6px 1px 3px #333333;
+  }
+  50% {
+    text-shadow: 4px 1px 3px #333333;
+  }
+  100% {
+    text-shadow: 8px 1px 3px #333333;
+  }
+}
+@keyframes ue {
+  0% {
+    text-shadow: 6px 1px 3px #333333;
+  }
+  50% {
+    text-shadow: 4px 1px 3px #333333;
+  }
+  100% {
+    text-shadow: 8px 1px 3px #333333;
+  }
+}
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 400;
 }
 
 p {
   font-size: 1.5vw;
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 200;
 }
 
@@ -349,15 +392,24 @@ h10 {
 }
 @keyframes rainbow_text {
   0% {
-    color: #2c90fc;
+    background: #8c00ff;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #8c00ff;
   }
   50% {
-    color: #8c00ff;
+    background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #1500ff;
   }
   100% {
-    color: #1500ff;
+    background: #2c90fc;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 3px 10px #2c90fc;
   }
 }
@@ -393,10 +445,10 @@ h10 {
 }
 @keyframes jiggle {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(12deg);
   }
   0% {
-    transform: rotate(12deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(-12deg);
@@ -415,16 +467,16 @@ h10 {
 }
 @keyframes boxflow {
   0% {
-    transform: translateY(-20%) translateX(5%);
+    transform: translateY(-5%) translateX(6%);
   }
   50% {
-    transform: translateY(25%) translateX(-10%);
+    transform: translateY(10%) translateX(-10%);
   }
   75% {
-    transform: translateY(-2%) translateX(10%);
+    transform: translateY(-20%) translateX(2%);
   }
   100% {
-    transform: translateY(15%) translateX(-20%);
+    transform: translateY(15%) translateX(-5%);
   }
 }
 @keyframes gradient {
@@ -438,16 +490,27 @@ h10 {
     background-position: 0% 50%;
   }
 }
+@keyframes ue {
+  0% {
+    text-shadow: 6px 1px 3px #333333;
+  }
+  50% {
+    text-shadow: 4px 1px 3px #333333;
+  }
+  100% {
+    text-shadow: 8px 1px 3px #333333;
+  }
+}
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 400;
 }
 
 p {
   font-size: 1.5vw;
   color: white;
-  font-family: "Ubuntu", Arial, sans-serif;
+  font-family: "Rajdhani", "Ubuntu", sans-serif;
   font-weight: 200;
 }
 
@@ -500,9 +563,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #222222;
+  z-index: 1;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  z-index: 1;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -512,11 +575,23 @@ body, html {
   scroll-behavior: smooth;
 }
 
-.disSelection, #bg1 > .loader span > h2 {
+.disSelection {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
       user-select: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.ue {
+  filter: brightness(120%);
+}
+
+.us {
+  filter: brightness(140%);
 }
 
 .hidden {
@@ -662,106 +737,4 @@ section3 {
           animation-fill-mode: none;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-}
-#bg1 > .loader {
-  width: 30vw;
-  height: 600px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  transform: skewY(15deg) translateX(-20%) translateY(10%);
-  -webkit-animation: boxcolor 5s;
-          animation: boxcolor 5s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-@media all and (max-width: 76.8rem) {
-  #bg1 > .loader {
-    width: 60vw;
-    left: 5%;
-  }
-}
-#bg1 > .loader span {
-  width: 400px;
-  height: 60px;
-  cursor: -webkit-grab;
-  cursor: grab;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #313131;
-  transition: 0.5s;
-  z-index: var(--z);
-  -webkit-animation: boxflow 9s;
-          animation: boxflow 9s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-  -webkit-animation-delay: calc(-1s * var(--z));
-          animation-delay: calc(-1s * var(--z));
-}
-#bg1 > .loader span > h2 {
-  width: 100%;
-  height: 100%;
-  bottom: 15%;
-  font-size: 30px;
-  font-weight: 100;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  position: relative;
-}
-#bg1 > .loader span:hover {
-  background: #440ec2;
-  transition: 0s;
-}
-#bg1 > .loader span:active {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-#bg1 > .loader span::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 240px;
-  height: 100%;
-  background: #292929;
-  transform-origin: right;
-  transform: skewY(-45deg) translateX(400px) translateY(160px);
-  transition: 0.5s;
-}
-#bg1 > .loader span:hover::before {
-  background-color: #25076b;
-  transition: 0s;
-}
-#bg1 > .loader span::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 400%;
-  transform-origin: top;
-  transform: skewX(-45deg) translateY(-240px);
-  background-color: #383838;
-  transition: 0.5s;
-}
-#bg1 > .loader span:hover::after {
-  background-color: #390aa6;
-  transition: 0s;
 }/*# sourceMappingURL=section3.css.map */

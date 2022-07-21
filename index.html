@@ -64,7 +64,7 @@
 
 		<div class="bu"></div>
 		<div id="sb0"></div>
-        <section1 class="container">
+        <section1 data-scrollbar class="container">
 				<div id="par1" alt="parallax-layer"></div>
 				<div id="par2" alt="parallax-layer"></div>
 				<div id="par3" alt="parallax-layer"></div>
@@ -76,32 +76,76 @@
 				</div>
 		</section1>
 
-		<section2 class="container">
+		<section2 data-scrollbar class="container">
 			<div id="sb1" class="section-box">
-				<h5 id="aboutmeheader" class="auto-type2"></h5>
+
 				<span>
-					<p>Lorem Ipsum is the single greatest threat. <br> We are not - we are not keeping up with other websites. <br>Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. <br>Does everybody know that pig named Lorem Ipsum? <br>An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.</p>
+					<h10 id="aboutmeheader1" style="--ah:1">ME</h10>
+					<h10 id="aboutmeheader2" style="--ah:2">ABOUT</h10>
+					<h5 id="aboutmeheader3" style="--ah:3">ABOUT ME</h5>
 				</span>
+
+				<div id="skills" class="container">
+
+					<div class="loader">
+
+						<span style="--z:10" class="dragbox ue"><h3>DATA:</h3></span>
+						<span style="--z:9" class="dragbox us"><h2>Name: Nico</h2></span>
+						<span style="--z:8" class="dragbox us"><h2>Age: 18</h2></span>
+						<span style="--z:7" class="dragbox us"><h2>From: Germany</h2></span>
+						<span style="--z:6" class="dragbox ue"><h3>SKILLS:</h3><h3 id="knowledge">STATUS:</h3></span>
+
+						<span style="--z:5" class="dragbox pointer us skill" id="skillblock1">
+							<h2>HTML & CSS (SASS)</h2>
+							<div>
+								<div>
+									<div id="loadingbar1"><p>100%</p></div>
+								</div>
+							</div>
+						</span>
+						<span style="--z:4" class="dragbox pointer us skill" id="skillblock2">
+							<h2>JavaScript</h2>
+							<div>
+								<div>
+									<div id="loadingbar2"><p>30%</p></div>
+								</div>
+							</div>
+						</span>
+						<span style="--z:3" class="dragbox pointer us skill" id="skillblock3">
+							<h2>Lua</h2>
+							<div>
+								<div>
+									<div id="loadingbar3"><p>60%</p></div>
+								</div>
+							</div>
+						</span>
+						<span style="--z:2" class="dragbox pointer us skill" id="skillblock4">
+							<h2>SQL</h2>
+							<div>
+								<div>
+									<div id="loadingbar4"><p>50%</p></div>
+								</div>
+							</div>
+						</span>
+						<span style="--z:1" class="dragbox pointer us skill" id="skillblock5">
+							<h2>Design</h2>
+							<div>
+								<div>
+									<div id="loadingbar5"><p>80%</p></div>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
 			</div>
 		</section2>
 
-		<section3 class="container">
+		<section3 data-scrollbar class="container">
 			<div id="bg1">
-				<div class="loader">
-					<span style="--z:10" class="dragbox"><h2>PLANNING</h2></span>
-					<span style="--z:9" class="dragbox"><h2>PROGRAMMING</h2></span>
-					<span style="--z:8" class="dragbox"><h2>IMPLEMENTATION</h2></span>
-					<span style="--z:7" class="dragbox"><h2>ANALYZE</h2></span>
-					<span style="--z:6" class="dragbox"><h2>DESIGN</h2></span>
-					<span style="--z:5" class="dragbox"><h2>TESTING</h2></span>
-					<span style="--z:4" class="dragbox"><h2>DEVELOPMENT</h2></span>
-					<span style="--z:3" class="dragbox"><h2>VALIDATION</h2></span>
-					<span style="--z:2" class="dragbox"><h2>VERIFICATION</h2></span>
-					<span style="--z:1" class="dragbox"><h2>SHIPPING</h2></span>
-				</div>
+				
 			</div>
 			
-		</section3>
+		</section3 data-scrollbar>
 
 		<section4>
 			<div id="sb2" class="section-box">
@@ -180,7 +224,7 @@
 		</section4>
 	</main>
 
-	<footer>
+	<footer data-scrollbar>
 		<div id="footer-banner">
 			<div id="contact-footer">
 				<h1>Contact</h1>
@@ -196,6 +240,8 @@
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	<script src="scripts/typed_text.js"></script>
+
+	<script src="scripts/smoothmousewheel.js"></script>
 	<script src="scripts/main.js"></script>
 	<script src="scripts/parallax.js"></script>
 	<script src="scripts/header.js"></script>

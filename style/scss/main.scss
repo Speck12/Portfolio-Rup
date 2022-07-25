@@ -34,6 +34,16 @@ body, html {
     scroll-behavior: smooth;
 }
 
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.smoothscroll {
+    width: 100%;
+    height: 100%;
+}
+
 // Disables the selection of text
 .disSelection {
     -webkit-user-select: none;
@@ -98,15 +108,14 @@ body, html {
     top: 4%;
     margin: 0;
     display: flex;
-    overflow-x: auto;
-    overflow-y: auto;
+    overflow-y: visible;
     box-shadow: 0px 3px 5px black;
 
     overflow:auto;
 
     z-index: 110;
 
-    & > span::before {
+    & > span {
 
         width: 100%;
         height: 30%;
@@ -126,20 +135,22 @@ body, html {
         z-index: 109;
 
         h1 {
-            font-size: 22px;
+            font-size: 25px;
             z-index: 109;
+            margin: 0;
+            cursor: auto;
         }
 
         p {
             font-size: 16px;
-            margin: 0;
+            margin: 5px;
 
             color: white;
 
             cursor: auto;
             
             & > a {
-                font-size: 24px;
+                font-size: 16px;
                 text-decoration: none;
 
                 transition: 3s;

@@ -102,3 +102,23 @@ skillblock5.addEventListener("click", (e)=> {
     }
 });
 
+// Scale boxes by resolution 
+
+/*
+function ScreenSizing() {
+    var box_loader = document.getElementById("box_loader");
+
+    var scw = window.screen.width;
+    var sizing = .0004 * scw;
+
+    if (window.screen.width > 1024) {
+        console.log(sizing);
+        box_loader.style.setProperty("--ressizing", sizing);
+    }
+}
+
+window.addEventListener("resize", (e)=> {
+    ScreenSizing();
+})
+
+ScreenSizing(); */

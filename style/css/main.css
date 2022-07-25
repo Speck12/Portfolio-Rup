@@ -325,6 +325,26 @@ h10 {
     text-shadow: none;
   }
 }
+@-webkit-keyframes blend_in {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-top: 5%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-top: 0%;
+  }
+}
+@keyframes blend_in {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-top: 5%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-top: 0%;
+  }
+}
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
   color: white;
   font-family: "Rajdhani", "Ubuntu", sans-serif;
@@ -403,6 +423,16 @@ body, html {
   scroll-behavior: smooth;
 }
 
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.smoothscroll {
+  width: 100%;
+  height: 100%;
+}
+
 .disSelection {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -461,13 +491,12 @@ body, html {
   top: 4%;
   margin: 0;
   display: flex;
-  overflow-x: auto;
-  overflow-y: auto;
+  overflow-y: visible;
   box-shadow: 0px 3px 5px black;
   overflow: auto;
   z-index: 110;
 }
-.imgviewer > span::before {
+.imgviewer > span {
   width: 100%;
   height: 30%;
   top: 120%;
@@ -480,24 +509,26 @@ body, html {
   transition: 0s;
   z-index: 109;
 }
-.imgviewer > span::before h1 {
-  font-size: 22px;
+.imgviewer > span h1 {
+  font-size: 25px;
   z-index: 109;
-}
-.imgviewer > span::before p {
-  font-size: 16px;
   margin: 0;
+  cursor: auto;
+}
+.imgviewer > span p {
+  font-size: 16px;
+  margin: 5px;
   color: white;
   cursor: auto;
 }
-.imgviewer > span::before p > a {
-  font-size: 24px;
+.imgviewer > span p > a {
+  font-size: 16px;
   text-decoration: none;
   transition: 3s;
   color: white;
   cursor: pointer;
 }
-.imgviewer > span::before p > a:hover {
+.imgviewer > span p > a:hover {
   -webkit-animation: rainbow_text 10s;
           animation: rainbow_text 10s;
   -webkit-animation-timing-function: ease-out;
@@ -513,7 +544,7 @@ body, html {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-.imgviewer > span::before p > a:active {
+.imgviewer > span p > a:active {
   filter: opacity(50%);
 }
 .imgviewer > span::after {

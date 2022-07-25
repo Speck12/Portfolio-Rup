@@ -1,5 +1,19 @@
-import Scrollbar from 'smooth-scrollbar';
+/*const body = document.body,
+scrollWrap = document.getElementsByClassName("smoothscroll")[0],
+height = scrollWrap.getBoundingClientRect().height - 1,
+speed = 0.12;
 
-Scrollbar.init(document.querySelector('#my-scrollbar'), options);
+var offset = 0;
 
-Scrollbar.initAll();
+body.style.height = Math.floor(height) + "px";
+
+function smoothScroll() {
+    offset += (window.pageYOffset - offset) * speed;
+
+    var scroll = "translateY(-" + offset + "px) translateZ(0)";
+    scrollWrap.style.cssText.transform = scroll;
+
+    callScroll = requestAnimationFrame(smoothScroll);
+}
+
+smoothScroll(); */

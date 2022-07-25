@@ -297,7 +297,7 @@ h10 {
 }
 @-webkit-keyframes ue {
   0% {
-    text-shadow: 6px 1px 3px #333333;
+    text-shadow: 6px 1px 3px #333333, 0px 3px 10px #8c00ff;
   }
   50% {
     text-shadow: 4px 1px 3px #333333;
@@ -308,13 +308,43 @@ h10 {
 }
 @keyframes ue {
   0% {
-    text-shadow: 6px 1px 3px #333333;
+    text-shadow: 6px 1px 3px #333333, 0px 3px 10px #8c00ff;
   }
   50% {
     text-shadow: 4px 1px 3px #333333;
   }
   100% {
     text-shadow: 8px 1px 3px #333333;
+  }
+}
+@-webkit-keyframes dis_ue {
+  0%, 100% {
+    text-shadow: none;
+  }
+}
+@keyframes dis_ue {
+  0%, 100% {
+    text-shadow: none;
+  }
+}
+@-webkit-keyframes blend_in {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-top: 5%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-top: 0%;
+  }
+}
+@keyframes blend_in {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-top: 5%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-top: 0%;
   }
 }
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
@@ -492,13 +522,28 @@ h10 {
 }
 @keyframes ue {
   0% {
-    text-shadow: 6px 1px 3px #333333;
+    text-shadow: 6px 1px 3px #333333, 0px 3px 10px #8c00ff;
   }
   50% {
     text-shadow: 4px 1px 3px #333333;
   }
   100% {
     text-shadow: 8px 1px 3px #333333;
+  }
+}
+@keyframes dis_ue {
+  0%, 100% {
+    text-shadow: none;
+  }
+}
+@keyframes blend_in {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-top: 5%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-top: 0%;
   }
 }
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
@@ -554,6 +599,10 @@ h10 {
   font-size: 7vw;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   min-width: 320px;
@@ -575,7 +624,17 @@ body, html {
   scroll-behavior: smooth;
 }
 
-.disSelection {
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.smoothscroll {
+  width: 100%;
+  height: 100%;
+}
+
+.disSelection, #sb2 > #project_us > #projectheader2, #sb2 > #project_us > #projectheader1 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -591,7 +650,7 @@ body, html {
 }
 
 .us {
-  filter: brightness(140%);
+  filter: brightness(130%);
 }
 
 .hidden {
@@ -633,13 +692,12 @@ body, html {
   top: 4%;
   margin: 0;
   display: flex;
-  overflow-x: auto;
-  overflow-y: auto;
+  overflow-y: visible;
   box-shadow: 0px 3px 5px black;
   overflow: auto;
   z-index: 110;
 }
-.imgviewer > span::before {
+.imgviewer > span {
   width: 100%;
   height: 30%;
   top: 120%;
@@ -652,24 +710,26 @@ body, html {
   transition: 0s;
   z-index: 109;
 }
-.imgviewer > span::before h1 {
-  font-size: 22px;
+.imgviewer > span h1 {
+  font-size: 25px;
   z-index: 109;
-}
-.imgviewer > span::before p {
-  font-size: 16px;
   margin: 0;
+  cursor: auto;
+}
+.imgviewer > span p {
+  font-size: 16px;
+  margin: 5px;
   color: white;
   cursor: auto;
 }
-.imgviewer > span::before p > a {
-  font-size: 24px;
+.imgviewer > span p > a {
+  font-size: 16px;
   text-decoration: none;
   transition: 3s;
   color: white;
   cursor: pointer;
 }
-.imgviewer > span::before p > a:hover {
+.imgviewer > span p > a:hover {
   -webkit-animation: rainbow_text 10s;
           animation: rainbow_text 10s;
   -webkit-animation-timing-function: ease-out;
@@ -685,7 +745,7 @@ body, html {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-.imgviewer > span::before p > a:active {
+.imgviewer > span p > a:active {
   filter: opacity(50%);
 }
 .imgviewer > span::after {
@@ -703,7 +763,7 @@ body, html {
 }
 
 section4 {
-  width: 110vw;
+  width: 100%;
   height: 140vh;
   top: 580vh;
   position: absolute;
@@ -716,7 +776,7 @@ section4::-webkit-scrollbar {
 
 #sb2 {
   width: 100%;
-  height: 180vh;
+  height: 200vh;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -742,33 +802,138 @@ section4::-webkit-scrollbar {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-#sb2 > h5 {
-  width: 95.5%;
-  height: 10%;
-  padding-top: 6vh;
+#sb2 > #project_us {
+  width: 100%;
+  height: 20%;
+  top: 12%;
   justify-content: center;
   align-content: center;
-  text-align: center;
-  display: flex;
   position: relative;
-  margin: 0;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  flex-basis: 91.5%;
-  z-index: 111;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
-@media all and (max-width: 76.8rem) {
-  #sb2 > h5 {
-    font-size: 6vh;
-    top: 5%;
+@media all and (max-width: 1024px) {
+  #sb2 > #project_us {
+    bottom: 25%;
   }
 }
-#sb2 > span {
+#sb2 > #project_us > #projectheader1 {
+  height: auto;
+  height: 100%;
+  color: rgb(37, 37, 37);
+  filter: opacity(83.5%);
+  font-stretch: 250%;
+  font-size: 24vw;
+  font-weight: bold;
+  bottom: 70%;
+  right: 50%;
+  white-space: nowrap;
+  position: absolute;
+  --show: none;
+  display: var(--show);
+}
+@media all and (max-width: 138rem) {
+  #sb2 > #project_us > #projectheader1 {
+    bottom: 120%;
+    left: -20%;
+  }
+}
+@media all and (max-width: 76.8rem) {
+  #sb2 > #project_us > #projectheader1 {
+    bottom: 40%;
+    left: -10%;
+  }
+}
+@media all and (max-width: 57.5rem) {
+  #sb2 > #project_us > #projectheader1 {
+    bottom: 40%;
+    left: -10%;
+  }
+}
+#sb2 > #project_us > #projectheader2 {
+  height: auto;
+  color: rgb(38, 38, 38);
+  font-stretch: 250%;
+  font-size: 23vw;
+  font-weight: bold;
+  left: 45%;
+  bottom: 40%;
+  white-space: nowrap;
+  position: absolute;
+  --show: none;
+  display: var(--show);
+}
+@media all and (max-width: 138rem) {
+  #sb2 > #project_us > #projectheader2 {
+    bottom: 15%;
+    left: 65%;
+  }
+}
+@media all and (max-width: 76.8rem) {
+  #sb2 > #project_us > #projectheader2 {
+    bottom: 50%;
+    left: 50%;
+  }
+}
+@media all and (max-width: 57.5rem) {
+  #sb2 > #project_us > #projectheader2 {
+    bottom: 102%;
+    left: 78%;
+  }
+}
+@media all and (max-width: 32rem) {
+  #sb2 > #project_us > #projectheader2 {
+    bottom: 102%;
+    left: 75%;
+  }
+}
+#sb2 > #project_us > #projectheader3 {
+  width: 100%;
+  height: 20vw;
+  background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 12vw;
+  font-weight: bold;
+  left: -15%;
+  bottom: -45%;
+  white-space: nowrap;
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  transition: 0.5s;
+  --show: none;
+  display: var(--show);
+}
+@media all and (max-width: 76.8rem) {
+  #sb2 > #project_us > #projectheader3 {
+    top: -25%;
+    left: 5%;
+  }
+}
+@media all and (max-width: 76.8rem) {
+  #sb2 > #project_us > #projectheader3 {
+    top: -25%;
+    left: -8%;
+  }
+}
+@media all and (max-width: 57.5rem) {
+  #sb2 > #project_us > #projectheader3 {
+    bottom: 160%;
+    left: -22%;
+  }
+}
+@media all and (max-width: 32rem) {
+  #sb2 > #project_us > #projectheader3 {
+    bottom: 110%;
+    right: 20%;
+  }
+}
+#sb2 > #projectlist {
   width: 120%;
   height: 59%;
-  margin-left: 11%;
-  margin-right: 20%;
   margin-bottom: 2%;
   margin-top: 5%;
   display: flex;
@@ -781,26 +946,25 @@ section4::-webkit-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-#sb2 > span::-webkit-scrollbar {
+#sb2 > #projectlist::-webkit-scrollbar {
   display: none;
 }
 @media all and (max-width: 76.8rem) {
-  #sb2 > span {
+  #sb2 > #projectlist {
     top: 5%;
     overflow: auto;
     height: 60%;
-    margin-right: 18%;
     margin-bottom: 40%;
   }
-  #sb2 > span::-webkit-scrollbar {
+  #sb2 > #projectlist::-webkit-scrollbar {
     display: none;
   }
 }
-#sb2 > span > .break {
+#sb2 > #projectlist > .break {
   flex-basis: 100%;
   height: 0;
 }
-#sb2 > span div {
+#sb2 > #projectlist div {
   cursor: pointer;
   margin: 2vh;
   margin-left: 3vh;
@@ -819,18 +983,18 @@ section4::-webkit-scrollbar {
   background-color: #313131;
 }
 @media all and (max-width: 76.8rem) {
-  #sb2 > span div {
+  #sb2 > #projectlist div {
     margin: 3%;
   }
 }
-#sb2 > span #proj12 {
+#sb2 > #projectlist #proj12 {
   background-image: url("img/projects/proj1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-origin: inherit;
 }
-#sb2 > span #proj99 {
+#sb2 > #projectlist #proj99 {
   width: 0%;
   height: 0%;
   background: none;

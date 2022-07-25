@@ -95,5 +95,13 @@
     animation-play-state: running;
 }
 
+@mixin blend_in() {
+    animation: blend_in 2s;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+    animation-fill-mode:forwards;
+    animation-play-state: running;
+}
+
 
 

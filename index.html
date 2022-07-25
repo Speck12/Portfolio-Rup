@@ -61,10 +61,9 @@
     </header>
 
 	<main>
-
 		<div class="bu"></div>
 		<div id="sb0"></div>
-        <section1 data-scrollbar class="container">
+        <section1 class="container">
 				<div id="par1" alt="parallax-layer"></div>
 				<div id="par2" alt="parallax-layer"></div>
 				<div id="par3" alt="parallax-layer"></div>
@@ -76,7 +75,7 @@
 				</div>
 		</section1>
 
-		<section2 data-scrollbar class="container">
+		<section2 class="container smoothscroll">
 			<div id="sb1" class="section-box">
 
 				<span>
@@ -87,7 +86,7 @@
 
 				<div id="skills" class="container">
 
-					<div class="loader">
+					<div id="box_loader" class="loader">
 
 						<span style="--z:10" class="dragbox ue"><h3>DATA:</h3></span>
 						<span style="--z:9" class="dragbox us"><h2>Name: Nico</h2></span>
@@ -136,32 +135,52 @@
 							</div>
 						</span>
 					</div>
+
+					<div id="skills_text" class="container">
+						<div>
+							<p>
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+							</p>
+						</div>
+					</div>
+
 				</div>
 			</div>
+
 		</section2>
 
-		<section3 data-scrollbar class="container">
+		<section3 class="container">
 			<div id="bg1">
 				
 			</div>
 			
-		</section3 data-scrollbar>
+		</section3>
 
 		<section4>
 			<div id="sb2" class="section-box">
-				<h5 class="auto-type3"></h5>
-				<span>
+
+				<span id="project_us">
+					<h10 id="projectheader1" style="--pj:1">PRO</h10>
+					<h10 id="projectheader2" style="--pj:2">JECTS</h10>
+					<h5 id="projectheader3" style="--pj:3">PROJECTS</h5>
+				</span>
+
+				<span id="projectlist">
 					<div id = "proj99" class="p" style="--p:99"></div>
 					
 					<div id = "proj12" class="p show" style="--p:12">
 					<span>
-						<h1>Beschreibung:</h1>
+						<h1> Beschreibung </h1>
 						<p>Ein Werbeflyer angefertigt, innerhalb eines <br>FOS-Praktikums, für QFact GmbH.</p>
 						<br>
-						<h1>Links:</h1>
-						<p id="download"><a href="/material/pdf/Qfact-Flyer.pdf" target="_blank">[ download .pdf ]</a></p>
-						<p><a href="https://www.qfact.de/" target="_blank">[ qfact.de ]</a></p>
-						<p><a href="https://fos-bos-weilheim.de/" target="_blank">[ fos-bos-weilheim.de ]</a></p>
+						<h1> Links </h1>
+						<p id="download">
+							<a href="/material/pdf/Qfact-Flyer.pdf" target="_blank">[ download .pdf ]</a>
+							<br>
+							<a href="https://www.qfact.de/" target="_blank">[ qfact.de ]</a>
+							<br>
+							<a href="https://fos-bos-weilheim.de/" target="_blank">[ fos-bos-weilheim.de ]</a>
+						</p>
 					</span>
 					</div>
 					<div id = "proj11" class="p show" style="--p:11">
@@ -243,7 +262,7 @@
 
 	<script src="scripts/smoothmousewheel.js"></script>
 	<script src="scripts/main.js"></script>
-	<script src="scripts/parallax.js"></script>
+	<script src="scripts/effects.js"></script>
 	<script src="scripts/header.js"></script>
 	<script src="scripts/movingboxes.js"></script>
 	<script src="scripts/projects.js"></script>

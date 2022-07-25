@@ -2,7 +2,7 @@
 @import "mixin/animation", "mixin/breakpoint", "mixin/main", "animation", "main";
 
 section4 {
-    width: 110vw;
+    width: 100%;
     height: 140vh;
 
     top: 580vh;
@@ -19,7 +19,7 @@ section4 {
 
 #sb2 {
     width: 100%;
-    height: 180vh;
+    height: 200vh;
 
     position: absolute;
     display:flex;
@@ -40,41 +40,159 @@ section4 {
 
     @include rainbow;
 
-    & > h5 {
-        width: 95.5%;
-        height: 10%;
+    & > #project_us {
+        width: 100%;
+        height: 20%;
 
-        padding-top: 6vh;
+        top: 12%;
 
         justify-content: center;
         align-content: center;
-        text-align: center;
 
-        display: flex;
         position: relative;
 
-        margin: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
 
-        display:flex;
 
-        flex-wrap: wrap;
-        flex-direction: row;
-        flex-basis: 91.5%;
-
-        z-index: 111;
-
-        @include media-down('md'){
-            font-size: 6vh;
-            top: 5%;
+        @include media-down('lg'){
+            bottom: 25%;
         }
     }
 
-    & > span {
+    & > #project_us > #projectheader1 {
+        height: auto;
+        height: 100%;
+
+        color: rgb(37, 37, 37);
+
+        filter: opacity(83.5%);
+
+        font-stretch: 250%;
+        font-size: 24vw;
+        font-weight: bold;
+
+        bottom: 70%;
+        right: 50%;
+
+        white-space: nowrap;
+
+        position: absolute;
+
+        --show: none;
+        display:var(--show);
+
+        @extend .disSelection;
+
+        @include media-down('hd'){
+            bottom: 120%;
+            left: -20%;
+        }
+
+        @include media-down('md'){
+            bottom: 40%;
+            left: -10%;
+        }
+
+        @include media-down('sm'){
+            bottom: 40%;
+            left: -10%;
+        }
+    }
+
+    & > #project_us > #projectheader2 {
+        height: auto;
+
+        color: rgb(38, 38, 38);
+
+        font-stretch: 250%;
+        font-size: 23vw;
+        font-weight: bold;
+
+        left: 45%;
+        bottom: 40%;
+
+        white-space: nowrap;
+
+        position: absolute;
+
+        --show: none;
+        display:var(--show);
+
+        @extend .disSelection;
+
+        @include media-down('hd'){
+            bottom: 15%;
+            left: 65%;
+        }
+
+        @include media-down('md'){
+            bottom: 50%;
+            left: 50%;
+        }
+
+        @include media-down('sm'){
+            bottom: 102%;
+            left: 78%;
+        }
+
+        @include media-down('xs'){
+            bottom: 102%;
+            left: 75%;
+        }
+    }
+
+    & > #project_us > #projectheader3 {
+        width: 100%;
+        height: 20vw;
+
+        background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        font-size: 12vw;
+        font-weight: bold;
+        left: -15%;
+        bottom: -45%;
+
+        white-space: nowrap;
+
+        position: absolute;
+
+        justify-content: center;
+        align-content: center;
+
+        transition: .5s;
+
+        --show: none;
+        display:var(--show);
+
+        @include media-down('md'){
+            top: -25%;
+            left: 5%
+        }
+
+        @include media-down('md'){
+            top: -25%;
+            left: -8%
+        }
+
+        @include media-down('sm'){
+            bottom: 160%;
+            left: -22%;
+        }
+
+        @include media-down('xs'){
+            bottom: 110%;
+            right: 20%;
+        }
+    }
+
+    & > #projectlist {
         width: 120%;
         height: 59%;
 
-        margin-left: 11%;
-        margin-right: 20%;
         margin-bottom: 2%;
         margin-top: 5%;
         
@@ -100,7 +218,6 @@ section4 {
             top: 5%;
             overflow: auto;
             height: 60%;
-            margin-right: 18%;
             margin-bottom: 40%;
             &::-webkit-scrollbar {
                 display: none;

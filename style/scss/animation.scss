@@ -157,3 +157,14 @@
 	}
 
 }
+
+@keyframes blend_in {
+	0% {
+		filter: opacity(0%) grayscale(100%);
+        padding-top: 5%;
+	}
+	100% {
+		filter: opacity(100%) grayscale(0%);
+        padding-top: 0%;
+	}
+}

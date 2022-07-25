@@ -4,8 +4,8 @@
 $innershadow: lighten(#333333, 20%);
 
 section2 {
-    width: 110vw;
-    height: 130vh;
+    width: 100%;
+    height: 110vh;
 
     position: absolute;
 
@@ -19,7 +19,7 @@ section2 {
 
 #sb1 {
     width: 100%;
-    height: 260vh;
+    height: 250vh;
 
     top: 230vh;
 
@@ -30,6 +30,7 @@ section2 {
     flex-direction: row;
 
     align-content: center;
+    justify-content: center;
 
     overflow:hidden;
 
@@ -44,15 +45,21 @@ section2 {
         width: 100%;
         height: 20%;
 
+        bottom: 17%;
+
         justify-content: center;
         align-content: center;
-        text-align: center;
 
         position: relative;
 
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
+
+
+        @include media-down('lg'){
+            bottom: 25%;
+        }
     }
 
     & > span > h5 {
@@ -63,15 +70,14 @@ section2 {
         align-content: center;
         text-align: center;
 
-        position: relative;
-
         margin: 0;
 
         z-index: var(--z);
     }
 
     & > span > #aboutmeheader1 {
-        height: 150vh;
+        height: auto;
+        height: 100%;
 
         color: rgb(37, 37, 37);
 
@@ -81,20 +87,35 @@ section2 {
         font-size: 24vw;
         font-weight: bold;
 
-        bottom: 5%;
-        left: -5%;
+        bottom: 70%;
 
         white-space: nowrap;
 
         position: absolute;
 
-        overflow: hidden;
+        --show: none;
+        display:var(--show);
 
         @extend .disSelection;
+
+        @include media-down('hd'){
+            bottom: 80%;
+            left: -10%;
+        }
+
+        @include media-down('md'){
+            bottom: 40%;
+            left: -10%;
+        }
+
+        @include media-down('sm'){
+            bottom: 40%;
+            left: -10%;
+        }
     }
 
     & > span > #aboutmeheader2 {
-        height: 150vh;
+        height: auto;
 
         color: rgb(38, 38, 38);
 
@@ -102,65 +123,230 @@ section2 {
         font-size: 23vw;
         font-weight: bold;
 
-        bottom: 175%;
-        left: 35%;
+        left: 45%;
+        bottom: 40%;
 
         white-space: nowrap;
 
         position: absolute;
 
-        overflow: hidden;
+        --show: none;
+        display:var(--show);
 
         @extend .disSelection;
+
+        @include media-down('hd'){
+            bottom: 45%;
+            left: 40%;
+        }
+
+        @include media-down('md'){
+            bottom: 50%;
+            left: 50%;
+        }
+
+        @include media-down('sm'){
+            bottom: 102%;
+            left: 78%;
+        }
+
+        @include media-down('xs'){
+            bottom: 102%;
+            left: 75%;
+        }
     }
 
     & > span > #aboutmeheader3 {
-        height: 120vh;
+        width: 100%;
+        height: 20vw;
 
         background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        font-stretch: 250%;
-        font-size: 11vw;
+        font-size: 12vw;
         font-weight: bold;
 
-        bottom:30%;
-        right: 9%;
+        bottom: 70%;
+        left: -5%;
 
         white-space: nowrap;
 
         position: absolute;
 
-        overflow: hidden;
+        justify-content: center;
+        align-content: center;
+
+        transition: .5s;
+
+        --show: none;
+        display:var(--show);
+
+        @include media-down('md'){
+            top: -25%;
+            left: 5%
+        }
+
+        @include media-down('md'){
+            top: -25%;
+            left: -8%
+        }
+
+        @include media-down('sm'){
+            bottom: 160%;
+            left: -22%;
+        }
+
+        @include media-down('xs'){
+            bottom: 110%;
+            right: 20%;
+        }
     }
 
-    & > #skills {
+
+    & > #skills { // ! Skill-box
         width: 100%;
         height: 100%;
 
-        top: 38%;
-        left: 15%;
+        top: 15%;
+        margin-left: 2%;
 
         position: absolute;
+
+        align-items: center;
+        justify-content: center;
+
+        transition: 2s;
         display: flex;
 
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        @include media-down('lg'){
+            flex-direction: column;
+            margin-left: 0;
+        }
+
+        overflow-x: visible;
+
+        --show: none;
+        display:var(--show);
+
+        & > #skills_text {
+            order: 2;
+
+            width: 30%;
+            height: auto;
+
+            padding-left: 5%;
+            top: -5%;
+
+            align-items: center;
+            justify-content: left;
+    
+            position: relative;
+            display: inline-flex;
+    
+            transition: 2s;
+
+            @include media-down('lg'){
+                width: 80vw;
+                right: 0;
+                padding-left: 0;
+                align-items: baseline;
+                justify-content: center;
+            }
+
+            @include media-down('xs'){
+                top: -80vh;
+            }
+            
+            & > div {
+                width: 100%;
+                height: auto;
+
+                position: absolute;
+                display: flex;
+
+                align-items: center;
+                justify-content: center;
+
+                transition: 2s;
+
+    
+                padding-left: .6rem;
+
+                border-width: 2px;
+                border-left-style: solid;
+                border-image: linear-gradient(to bottom, #8c00ff 0%, #2c90fc 100%) 0 100%;
+
+                @include media-down('lg'){
+                    border-width: 0px;
+                }
+        
+                & > p {
+                    font-size: 26px;
+                    margin: 0;
+
+                    @include media-down('lg'){
+                        text-align: center;
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+
         & > .loader {
-            width: 30vw;
-            height: 600px;
+            --ressizing: 1;
+
+            order: 1;
+
+            width: 30%;
+            height: auto;
+
     
             position: relative;
             display: flex;
     
             flex-direction: column;
+            justify-content: center;
     
-            transform: skewY(15deg) translateX(-20%) translateY(10%);
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(var(--ressizing));
     
             @include boxcolor;
-    
+
+            @include media-down('xl'){
+                transform: skewY(15deg) translateX(-20%) translateY(10%) scale(1.2);
+            }
+
+            @include media-down('hd'){
+                transform: skewY(15deg) translateX(-20%) translateY(10%) scale(1);
+            }
+
+            @include media-down('ws'){
+                transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.9);
+                margin-right: 5%;
+            }
+
+            @include media-down('lg'){
+                transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.5);
+                top: -10%;
+            }
+
             @include media-down('md'){
-                width: 60vw;
-                left: 5%;
+                transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.7);
+                margin-right: 10%;
+            }
+
+            @include media-down('sm'){
+                transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.66);
+                margin-right: 20%;
+            }
+
+            @include media-down('xs'){
+                transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.55);
+                margin-right: 38%;
+                top: -80vh;
             }
     
             & span {
@@ -180,7 +366,6 @@ section2 {
 
                 box-shadow: inset 0px 0px 5px $primary-color;
     
-
                 @include boxflow;
                 animation-delay: calc(-.8s * var(--z));
 
@@ -367,5 +552,8 @@ section2 {
                 transition: 0s;
             }
         }
-    }    
+    
+    } 
+
+
 }

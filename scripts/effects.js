@@ -56,7 +56,7 @@ const target15 = document.getElementById("projectheader2"); // ? Projects - Head
 const target16 = document.getElementById("projectheader3"); // ? Projects - Header 2
 
 const blend_in_about_me = 1700;
-const blend_in_skill_box = 2000;
+const blend_in_skill_box = 2800;
 const blend_in_project = 3700;
 
 window.addEventListener("scroll", function(e) {
@@ -83,6 +83,13 @@ window.addEventListener("scroll", function(e) {
 
     // ! Project Section
     if (scrolled > blend_in_project) {
+        
+        if (window.screen.width <= 1024) {
+            target14.style.transform = 'translate3d(0px, 0px, 0px)';
+            target15.style.transform = 'translate3d(0px, 0px, 0px)';
+            target16.style.transform = 'translate3d(0px, 0px, 0px)';
+            return
+        }
 
         target14.style.transform = 'translate3d(' + rate + 'px, 0px, 0px)';
 

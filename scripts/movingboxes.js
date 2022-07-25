@@ -49,10 +49,24 @@ var Reset5 = function() {
 
 skillblock1.addEventListener("click", (e)=> {
     loadingbar1.style.width = "190px";
-
     if (timeout1 == false) { 
         setTimeout(Reset1, 1000 * timer);
         timeout1 = true;
+
+        let loadingbar = loadingbartxt1;
+        let to = 90;
+
+        let from = 0;
+        let interval = to * .1;
+        let step = to > from ? 1 : -1;
+
+        if(from == to){loadingbar.textContent = from + "%";return}
+        let counter = setInterval(function(){
+            from += step; 
+            loadingbar.textContent = from + "%"; 
+            if(from == to){clearInterval(counter)};
+        }, interval);
+
     } else if (timeout1 == true) {
         return
     }
@@ -64,28 +78,73 @@ skillblock2.addEventListener("click", (e)=> {
     if (timeout2 == false) { 
         setTimeout(Reset2, 1000 * timer);
         timeout2 = true;
+
+        let loadingbar = loadingbartxt2;
+        let to = 30;
+
+        let from = 0;
+        let interval = to * .7;
+        let step = to > from ? 1 : -1;
+
+        if(from == to){loadingbar.textContent = from + "%";return}
+        let counter = setInterval(function(){
+            from += step; 
+            loadingbar.textContent = from + "%"; 
+            if(from == to){clearInterval(counter)};
+        }, interval);
+
     } else if (timeout2 == true) {
         return
     }
 });
 
 skillblock3.addEventListener("click", (e)=> {
-    loadingbar3.style.width = "120px";
+    loadingbar3.style.width = "135px";
 
     if (timeout3 == false) { 
         setTimeout(Reset3, 1000 * timer);
         timeout3 = true;
+
+        let loadingbar = loadingbartxt3;
+        let to = 60;
+
+        let from = 0;
+        let interval = to * .2;
+        let step = to > from ? 1 : -1;
+
+        if(from == to){loadingbar.textContent = from + "%";return}
+        let counter = setInterval(function(){
+            from += step; 
+            loadingbar.textContent = from + "%"; 
+            if(from == to){clearInterval(counter)};
+        }, interval);
+
     } else if (timeout3 == true) {
         return
     }
 });
 
 skillblock4.addEventListener("click", (e)=> {
-    loadingbar4.style.width = "100px";
+    loadingbar4.style.width = "120px";
 
     if (timeout4 == false) { 
         setTimeout(Reset4, 1000 * timer);
         timeout4 = true;
+
+        let loadingbar = loadingbartxt4;
+        let to = 50;
+
+        let from = 0;
+        let interval = to * .3;
+        let step = to > from ? 1 : -1;
+
+        if(from == to){loadingbar.textContent = from + "%";return}
+        let counter = setInterval(function(){
+            from += step; 
+            loadingbar.textContent = from + "%"; 
+            if(from == to){clearInterval(counter)};
+        }, interval);
+
     } else if (timeout4 == true) {
         return
     }
@@ -97,10 +156,27 @@ skillblock5.addEventListener("click", (e)=> {
     if (timeout5 == false) { 
         setTimeout(Reset5, 1000 * timer);
         timeout5 = true;
+
+        let loadingbar = loadingbartxt5;
+        let to = 80;
+
+        let from = 0;
+        let interval = to * .1;
+        let step = to > from ? 1 : -1;
+
+        if(from == to){loadingbar.textContent = from + "%";return}
+        let counter = setInterval(function(){
+            from += step; 
+            loadingbar.textContent = from + "%"; 
+            if(from == to){clearInterval(counter)};
+        }, interval);
+
     } else if (timeout5 == true) {
         return
     }
 });
+
+
 
 // Scale boxes by resolution 
 

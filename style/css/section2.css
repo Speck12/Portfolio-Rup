@@ -1049,7 +1049,7 @@ section2::-webkit-scrollbar {
     transform: skewY(15deg) translateX(-20%) translateY(10%) scale(1);
   }
 }
-@media all and (max-width: 120rem) {
+@media all and (max-width: 1440px) {
   #sb1 > #skills > .loader {
     transform: skewY(15deg) translateX(-20%) translateY(10%) scale(0.9);
     margin-right: 5%;

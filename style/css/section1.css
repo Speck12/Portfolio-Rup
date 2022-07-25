@@ -892,7 +892,7 @@ section1::-webkit-scrollbar {
   font-size: 280%;
   margin-bottom: 3vh;
 }
-@media all and (max-width: 120rem) {
+@media all and (max-width: 1440px) {
   #par6 > h5 {
     font-size: 380%;
   }
@@ -903,7 +903,7 @@ section1::-webkit-scrollbar {
   height: 30%;
   margin: auto;
 }
-@media all and (max-width: 120rem) {
+@media all and (max-width: 1440px) {
   #par6 > h6 {
     font-size: 420%;
   }

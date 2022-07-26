@@ -59,11 +59,11 @@ const blend_in_about_me = 1.8;
 const blend_in_skill_box = 2.6;
 const blend_in_project = 5.3;
 
+const blend_in_parallax = 2.5;
+
 window.addEventListener("scroll", function(e) {
     var scrolled = Math.round(window.pageYOffset / window.innerHeight * 1450);
     var rate = scrolled * .05;
-
-    console.log(rate);
 
     // ! About me Section
     if (scrolled > blend_in_about_me) {
@@ -97,25 +97,84 @@ window.addEventListener("scroll", function(e) {
 
 });
 
+const target17 = document.getElementById("par1_2"); // ? Background
+const target18 = document.getElementById("par2_2"); // ? Planet
+const target19 = document.getElementById("par3_2"); // ? Mountains
+const target20 = document.getElementById("par4_2"); // ? Ground
+const target21 = document.getElementById("par5_2"); // ? Ground Front
+
+window.addEventListener("scroll", function(e) {
+    var scrolled = Math.round(window.pageYOffset / window.innerHeight * 1450);
+    var rate = scrolled;
+
+    console.log(scrolled);
+
+    rate = scrolled * .03;
+
+    target17.style.transform = 'translate3d(0px, -' + rate + 'px, 0px) rotate(-'+ rate/15 +'deg)';
+
+    rate = scrolled * .1;
+
+    target18.style.transform = 'translate3d(0px, -' + rate * 1.5 + 'px, 0px)';
+
+    target20.style.transform = 'translate3d(0px, -' + rate + 'px, 0px)';
+    target19.style.transform = 'translate3d(0px, -' + rate * .7 + 'px, 0px)';
+
+    rate = scrolled * .08;
+
+    target21.style.transform = 'translate3d(0px, -' + rate + 'px, 0px)';
+
+});
+
 /* FOR BLEND IN EFFECTS */
 
 window.addEventListener("scroll", function(e) {
     var scrolled = window.pageYOffset / window.innerHeight;
 
+    if (scrolled > blend_in_parallax) { 
+        target17.style.setProperty("--show", "flexbox");
+        target18.style.setProperty("--show", "flexbox");
+        target19.style.setProperty("--show", "flexbox");
+        target20.style.setProperty("--show", "flexbox");
+        target21.style.setProperty("--show", "flexbox");
+
+        target0.style.setProperty("--show", "none");
+        target1.style.setProperty("--show", "none");
+        target2.style.setProperty("--show", "none");
+        target3.style.setProperty("--show", "none");
+        target4.style.setProperty("--show", "none");
+        target5.style.setProperty("--show", "none");
+    } 
+    
+    if (scrolled < blend_in_parallax) {
+        target17.style.setProperty("--show", "none");
+        target18.style.setProperty("--show", "none");
+        target19.style.setProperty("--show", "none");
+        target20.style.setProperty("--show", "none");
+        target21.style.setProperty("--show", "none");
+
+        target0.style.setProperty("--show", "flexbox");
+        target1.style.setProperty("--show", "flexbox");
+        target2.style.setProperty("--show", "flexbox");
+        target3.style.setProperty("--show", "flexbox");
+        target4.style.setProperty("--show", "flexbox");
+        target5.style.setProperty("--show", "flexbox");
+    }
+
     if (scrolled > blend_in_about_me) { // blending in the headers of SECTION 2
         target10.style.setProperty("--show", "flex"); target10.style.animation = "blend_in 2s";
         target11.style.setProperty("--show", "flex"); target11.style.animation = "blend_in 2s";
         target12.style.setProperty("--show", "flex"); target12.style.animation = "blend_in 2s";
-    } else {return}
+    } 
 
     if (scrolled > blend_in_skill_box) { // blending int the skill-box
         target13.style.setProperty("--show", "flex"); target13.style.animation = "blend_in 2s"
-    } else {return}
+    } 
 
     if (scrolled > blend_in_project) { // blending int the projects
         target14.style.setProperty("--show", "flex"); target14.style.animation = "blend_in 2s";
         target15.style.setProperty("--show", "flex"); target15.style.animation = "blend_in 2s";
         target16.style.setProperty("--show", "flex"); target16.style.animation = "blend_in 2s";
-    } else {return}
+    }
 
 });

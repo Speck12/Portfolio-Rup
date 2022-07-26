@@ -7,8 +7,6 @@ section1 {
     width: 100%;
     height: 100vh;
 
-    top: 9vh;
-
     position: fixed;
     overflow: hidden;
 
@@ -32,8 +30,11 @@ section1 {
     width: 100%;
     height: 100%;
 
+    top: 5vh;
+
     position: absolute;
-    display: flexbox;
+    --show: none;
+    display: var(--show);
 
     background-image: url("img/space.png");
     background-position: center;
@@ -53,7 +54,8 @@ section1 {
     top: 25%;
 
     position: absolute;
-    display:flexbox;
+    --show: none;
+    display: var(--show);
 
     background-image: url("img/stones.png");
     background-position: center;
@@ -72,7 +74,8 @@ section1 {
     top: 5%;
 
     position: absolute;
-    display: flexbox;
+    --show: none;
+    display: var(--show);
 
     background-image: url("img/planets1.png");
     background-position: center;
@@ -94,7 +97,8 @@ section1 {
     top: 5%;
 
     position: absolute;
-    display: flexbox;
+    --show: none;
+    display: var(--show);
 
     background-image: url("img/planets2.png");
     background-position: center;
@@ -113,7 +117,8 @@ section1 {
     top: 91%;
 
     position: relative;
-    display: flexbox;
+    --show: none;
+    display: var(--show);
 
     background-image: url("img/astronaut.png");
     background-position: center;
@@ -135,7 +140,8 @@ section1 {
     top: 4%;
 
     position: relative;
-    display: flexbox;
+    --show: none;
+    display: var(--show);
 
     font-weight: 800;
     text-shadow: $text-shadow-normal;

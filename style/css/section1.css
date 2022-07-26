@@ -765,7 +765,6 @@ main {
 section1 {
   width: 100%;
   height: 100vh;
-  top: 9vh;
   position: fixed;
   overflow: hidden;
   align-items: center;
@@ -785,8 +784,10 @@ section1::-webkit-scrollbar {
 #par1 {
   width: 100%;
   height: 100%;
+  top: 5vh;
   position: absolute;
-  display: flexbox;
+  --show: none;
+  display: var(--show);
   background-image: url("img/space.png");
   background-position: center;
   background-size: cover;
@@ -801,7 +802,8 @@ section1::-webkit-scrollbar {
   height: 100%;
   top: 25%;
   position: absolute;
-  display: flexbox;
+  --show: none;
+  display: var(--show);
   background-image: url("img/stones.png");
   background-position: center;
   background-size: cover;
@@ -815,7 +817,8 @@ section1::-webkit-scrollbar {
   height: 100%;
   top: 5%;
   position: absolute;
-  display: flexbox;
+  --show: none;
+  display: var(--show);
   background-image: url("img/planets1.png");
   background-position: center;
   background-size: contain;
@@ -830,7 +833,8 @@ section1::-webkit-scrollbar {
   height: 100%;
   top: 5%;
   position: absolute;
-  display: flexbox;
+  --show: none;
+  display: var(--show);
   background-image: url("img/planets2.png");
   background-position: center;
   background-size: cover;
@@ -844,7 +848,8 @@ section1::-webkit-scrollbar {
   height: 15%;
   top: 91%;
   position: relative;
-  display: flexbox;
+  --show: none;
+  display: var(--show);
   background-image: url("img/astronaut.png");
   background-position: center;
   background-size: contain;
@@ -860,7 +865,8 @@ section1::-webkit-scrollbar {
   left: 26%;
   top: 4%;
   position: relative;
-  display: flexbox;
+  --show: none;
+  display: var(--show);
   font-weight: 800;
   text-shadow: 1px 3px 30px black, 1px 1px 10px black;
   text-align: center;

@@ -815,7 +815,7 @@ section1::-webkit-scrollbar {
 #par3 {
   width: 100%;
   height: 100%;
-  top: 5%;
+  top: 10%;
   position: absolute;
   --show: none;
   display: var(--show);
@@ -823,7 +823,6 @@ section1::-webkit-scrollbar {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  filter: drop-shadow(0 0 0.3vw #2c90fc);
   transition: 0.1s;
   z-index: 82;
 }

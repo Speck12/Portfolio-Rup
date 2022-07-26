@@ -763,7 +763,7 @@ main {
 }
 
 section3 {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   top: 0vh;
   position: fixed;
@@ -775,9 +775,9 @@ section3 {
 }
 
 #par1_2 {
-  width: 100%;
-  height: 100%;
-  top: 5%;
+  width: 120%;
+  height: 100vh;
+  top: 5vh;
   position: absolute;
   --show: none;
   display: var(--show);
@@ -793,7 +793,8 @@ section3 {
 #par2_2 {
   width: 100%;
   height: 100%;
-  top: 60%;
+  top: 90vh;
+  right: 2vw;
   position: absolute;
   --show: none;
   display: var(--show);
@@ -808,7 +809,7 @@ section3 {
 #par3_2 {
   width: 100%;
   height: 100%;
-  top: 40vh;
+  top: 60vh;
   position: absolute;
   --show: none;
   display: var(--show);
@@ -823,7 +824,7 @@ section3 {
 #par4_2 {
   width: 100%;
   height: 100%;
-  top: 55%;
+  top: 77vh;
   position: absolute;
   --show: none;
   display: var(--show);
@@ -836,15 +837,15 @@ section3 {
 }
 
 #par5_2 {
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  top: 45%;
+  top: 63vh;
   position: absolute;
   --show: none;
   display: var(--show);
   background-image: url("img/ground_f.png");
-  background-position: center;
-  background-size: contain;
+  background-position: bottom;
+  background-size: cover;
   background-repeat: no-repeat;
   transition: 0.1s;
   z-index: 95;

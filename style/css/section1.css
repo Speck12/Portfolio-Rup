@@ -762,20 +762,24 @@ main {
   z-index: 109;
 }
 
-#sb0 {
-  width: 100%;
-  height: 10%;
-  position: absolute;
-}
-
 section1 {
-  width: 100vw;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
+  top: 9vh;
+  position: fixed;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 section1::-webkit-scrollbar {
   display: none;
+}
+
+#sb0 {
+  width: 100%;
+  height: 20%;
 }
 
 #par1 {
@@ -820,11 +824,6 @@ section1::-webkit-scrollbar {
   transition: 0.1s;
   z-index: 82;
 }
-@media all and (max-width: 1024px) {
-  #par3 {
-    background-size: cover;
-  }
-}
 
 #par4 {
   width: 100%;
@@ -853,13 +852,6 @@ section1::-webkit-scrollbar {
   transition: 0.1s;
   z-index: 85;
 }
-@media all and (max-width: 32rem) {
-  #par5 {
-    width: 35%;
-    height: 55%;
-    top: 95%;
-  }
-}
 
 #par6 {
   width: 80%;
@@ -875,51 +867,14 @@ section1::-webkit-scrollbar {
   transition: 0.1s;
   z-index: 82;
 }
-@media all and (max-width: 32rem) {
-  #par6 {
-    top: -20%;
-    left: 0;
-  }
-}
-@media all and (max-width: 1024px) {
-  #par6 {
-    margin: auto;
-    left: 0;
-  }
-}
 #par6 > h5 {
   font-weight: 600;
   font-size: 280%;
   margin-bottom: 3vh;
-}
-@media all and (max-width: 1440px) {
-  #par6 > h5 {
-    font-size: 380%;
-  }
 }
 #par6 > h6 {
   font-weight: 800;
   font-size: 360%;
   height: 30%;
   margin: auto;
-}
-@media all and (max-width: 1440px) {
-  #par6 > h6 {
-    font-size: 420%;
-  }
-}
-
-section1 {
-  width: 100%;
-  height: 100vh;
-  top: 9vh;
-  position: fixed;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-section1::-webkit-scrollbar {
-  display: none;
 }/*# sourceMappingURL=section1.css.map */

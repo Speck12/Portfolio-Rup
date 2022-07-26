@@ -55,16 +55,15 @@ const target14 = document.getElementById("projectheader1"); // ? Projects - Head
 const target15 = document.getElementById("projectheader2"); // ? Projects - Header 2
 const target16 = document.getElementById("projectheader3"); // ? Projects - Header 2
 
-const blend_in_about_me = 1700;
-const blend_in_skill_box = 2800;
-const blend_in_project = 3700;
+const blend_in_about_me = 1.8;
+const blend_in_skill_box = 2.6;
+const blend_in_project = 5.3;
 
 window.addEventListener("scroll", function(e) {
+    var scrolled = Math.round(window.pageYOffset / window.innerHeight * 1450);
+    var rate = scrolled * .05;
 
-    var scrolled = window.pageYOffset;
-    let rate = scrolled * .03;
-
-    console.log(scrolled);
+    console.log(rate);
 
     // ! About me Section
     if (scrolled > blend_in_about_me) {
@@ -83,13 +82,6 @@ window.addEventListener("scroll", function(e) {
 
     // ! Project Section
     if (scrolled > blend_in_project) {
-        
-        if (window.screen.width <= 1024) {
-            target14.style.transform = 'translate3d(0px, 0px, 0px)';
-            target15.style.transform = 'translate3d(0px, 0px, 0px)';
-            target16.style.transform = 'translate3d(0px, 0px, 0px)';
-            return
-        }
 
         target14.style.transform = 'translate3d(' + rate + 'px, 0px, 0px)';
 
@@ -108,7 +100,7 @@ window.addEventListener("scroll", function(e) {
 /* FOR BLEND IN EFFECTS */
 
 window.addEventListener("scroll", function(e) {
-    var scrolled = window.pageYOffset;
+    var scrolled = window.pageYOffset / window.innerHeight;
 
     if (scrolled > blend_in_about_me) { // blending in the headers of SECTION 2
         target10.style.setProperty("--show", "flex"); target10.style.animation = "blend_in 2s";

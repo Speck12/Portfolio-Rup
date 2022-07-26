@@ -765,7 +765,7 @@ main {
 #footer-banner {
   width: 100%;
   height: 32vh;
-  top: 750vh;
+  top: 720vh;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -791,9 +791,10 @@ main {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-@media all and (max-width: 76.8rem) {
+@media all and (max-width: 768px) {
   #footer-banner {
     height: 22vh;
+    top: 750vh;
   }
 }
 #footer-banner div {
@@ -805,7 +806,7 @@ main {
   justify-content: center;
   align-content: center;
 }
-@media all and (max-width: 76.8rem) {
+@media all and (max-width: 768px) {
   #footer-banner div {
     width: 45%;
   }
@@ -815,7 +816,7 @@ main {
   margin-top: 15%;
   font-size: 38px;
 }
-@media all and (max-width: 76.8rem) {
+@media all and (max-width: 768px) {
   #footer-banner div > h1 {
     font-size: 18px;
   }
@@ -824,7 +825,7 @@ main {
   font-size: 25px;
   font-weight: 100;
 }
-@media all and (max-width: 76.8rem) {
+@media all and (max-width: 768px) {
   #footer-banner div > p {
     font-size: 13px;
   }

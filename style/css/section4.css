@@ -776,14 +776,14 @@ section4::-webkit-scrollbar {
 
 #sb2 {
   width: 100%;
-  height: 200vh;
+  height: 140vh;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
   overflow-y: hidden;
-  overflow-x: visible;
+  overflow-x: hidden;
   background-color: #222222;
   box-shadow: 1px 3px 10px black, 1px 1px 10px black;
   z-index: 105;
@@ -802,10 +802,16 @@ section4::-webkit-scrollbar {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
+@media all and (max-width: 768px) {
+  #sb2 {
+    height: 180vh;
+  }
+}
 #sb2 > #project_us {
   width: 100%;
-  height: 20%;
-  top: 5%;
+  height: 12vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   justify-content: center;
   align-content: center;
   position: relative;
@@ -820,9 +826,26 @@ section4::-webkit-scrollbar {
   font-stretch: 250%;
   font-size: 24vw;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
   position: absolute;
   --show: none;
   display: var(--show);
+}
+@media all and (max-width: 1290px) {
+  #sb2 > #project_us > #projectheader1 {
+    left: 25vw;
+  }
+}
+@media all and (max-width: 1024px) {
+  #sb2 > #project_us > #projectheader1 {
+    left: 15vw;
+  }
+}
+@media all and (max-width: 768px) {
+  #sb2 > #project_us > #projectheader1 {
+    left: 12vw;
+  }
 }
 #sb2 > #project_us > #projectheader2 {
   height: auto;
@@ -830,25 +853,49 @@ section4::-webkit-scrollbar {
   font-stretch: 250%;
   font-size: 23vw;
   font-weight: bold;
-  white-space: nowrap;
+  margin: 0;
+  padding: 0;
   position: relative;
   --show: none;
   display: var(--show);
 }
+@media all and (max-width: 1440px) {
+  #sb2 > #project_us > #projectheader2 {
+    right: -25vw;
+  }
+}
+@media all and (max-width: 1024px) {
+  #sb2 > #project_us > #projectheader2 {
+    right: -25vw;
+  }
+}
+@media all and (max-width: 768px) {
+  #sb2 > #project_us > #projectheader2 {
+    right: -25vw;
+  }
+}
+@media all and (max-width: 920px) {
+  #sb2 > #project_us > #projectheader2 {
+    right: -115vw;
+  }
+}
 #sb2 > #project_us > #projectheader3 {
   width: 100%;
-  height: 15vh;
+  height: 15vw;
   background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 12vw;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
+  right: 400px;
   text-align: center;
   white-space: nowrap;
   position: absolute;
-  justify-content: center;
   align-content: center;
+  justify-content: center;
   transition: 0.5s;
   --show: none;
   display: var(--show);
@@ -857,7 +904,7 @@ section4::-webkit-scrollbar {
   width: 120%;
   height: 59%;
   margin-bottom: 2%;
-  margin-top: 5%;
+  margin-top: 5vh;
   display: flex;
   position: relative;
   align-content: flex-start;
@@ -871,15 +918,21 @@ section4::-webkit-scrollbar {
 #sb2 > #projectlist::-webkit-scrollbar {
   display: none;
 }
-@media all and (max-width: 76.8rem) {
+@media all and (max-width: 768px) {
   #sb2 > #projectlist {
-    top: 5%;
+    top: 6%;
     overflow: auto;
     height: 60%;
     margin-bottom: 40%;
   }
   #sb2 > #projectlist::-webkit-scrollbar {
     display: none;
+  }
+}
+@media all and (max-width: 920px) {
+  #sb2 > #projectlist {
+    top: -3%;
+    height: 70%;
   }
 }
 #sb2 > #projectlist > .break {
@@ -904,7 +957,7 @@ section4::-webkit-scrollbar {
   background-origin: inherit;
   background-color: #313131;
 }
-@media all and (max-width: 76.8rem) {
+@media all and (max-width: 768px) {
   #sb2 > #projectlist div {
     margin: 3%;
   }

@@ -775,7 +775,7 @@ section2::-webkit-scrollbar {
 
 #sb1 {
   width: 100%;
-  height: 250vh;
+  height: 220vh;
   top: 230vh;
   position: absolute;
   display: flex;
@@ -783,7 +783,8 @@ section2::-webkit-scrollbar {
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
   background-color: #222222;
   box-shadow: 1px 3px 10px black, 1px 1px 10px black;
   z-index: 100;
@@ -803,189 +804,90 @@ section2::-webkit-scrollbar {
           animation-play-state: running;
 }
 #sb1 > span {
-  width: 100%;
-  height: 20%;
-  bottom: 17%;
+  width: 95%;
+  height: 12vw;
+  margin-top: 15vh;
+  bottom: 75vh;
   justify-content: center;
   align-content: center;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: column;
-}
-@media all and (max-width: 1024px) {
-  #sb1 > span {
-    bottom: 25%;
-  }
-}
-#sb1 > span > h5 {
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  margin: 0;
-  z-index: var(--z);
 }
 #sb1 > span > #aboutmeheader1 {
-  height: auto;
-  height: 100%;
+  width: 100%;
+  height: 15vw;
+  color: rgb(38, 38, 38);
+  font-stretch: 250%;
+  font-size: 24vw;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  right: -40%;
+  position: absolute;
+  --show: none;
+  display: var(--show);
+}
+#sb1 > span > #aboutmeheader2 {
+  width: 100%;
+  height: 15vw;
   color: rgb(37, 37, 37);
   filter: opacity(83.5%);
   font-stretch: 250%;
   font-size: 24vw;
   font-weight: bold;
-  bottom: 70%;
-  white-space: nowrap;
+  margin: 0;
+  padding: 0;
   position: absolute;
   --show: none;
   display: var(--show);
-}
-@media all and (max-width: 138rem) {
-  #sb1 > span > #aboutmeheader1 {
-    bottom: 80%;
-    left: -10%;
-  }
-}
-@media all and (max-width: 76.8rem) {
-  #sb1 > span > #aboutmeheader1 {
-    bottom: 40%;
-    left: -10%;
-  }
-}
-@media all and (max-width: 57.5rem) {
-  #sb1 > span > #aboutmeheader1 {
-    bottom: 40%;
-    left: -10%;
-  }
-}
-#sb1 > span > #aboutmeheader2 {
-  height: auto;
-  color: rgb(38, 38, 38);
-  font-stretch: 250%;
-  font-size: 23vw;
-  font-weight: bold;
-  left: 45%;
-  bottom: 40%;
-  white-space: nowrap;
-  position: absolute;
-  --show: none;
-  display: var(--show);
-}
-@media all and (max-width: 138rem) {
-  #sb1 > span > #aboutmeheader2 {
-    bottom: 45%;
-    left: 40%;
-  }
-}
-@media all and (max-width: 76.8rem) {
-  #sb1 > span > #aboutmeheader2 {
-    bottom: 50%;
-    left: 50%;
-  }
-}
-@media all and (max-width: 57.5rem) {
-  #sb1 > span > #aboutmeheader2 {
-    bottom: 102%;
-    left: 78%;
-  }
-}
-@media all and (max-width: 32rem) {
-  #sb1 > span > #aboutmeheader2 {
-    bottom: 102%;
-    left: 75%;
-  }
 }
 #sb1 > span > #aboutmeheader3 {
   width: 100%;
-  height: 20vw;
+  height: 15vw;
   background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 12vw;
   font-weight: bold;
-  bottom: 70%;
-  left: -5%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
   white-space: nowrap;
-  position: absolute;
-  justify-content: center;
+  position: relative;
   align-content: center;
+  justify-content: center;
   transition: 0.5s;
   --show: none;
   display: var(--show);
 }
-@media all and (max-width: 76.8rem) {
-  #sb1 > span > #aboutmeheader3 {
-    top: -25%;
-    left: 5%;
-  }
-}
-@media all and (max-width: 76.8rem) {
-  #sb1 > span > #aboutmeheader3 {
-    top: -25%;
-    left: -8%;
-  }
-}
-@media all and (max-width: 57.5rem) {
-  #sb1 > span > #aboutmeheader3 {
-    bottom: 160%;
-    left: -22%;
-  }
-}
-@media all and (max-width: 32rem) {
-  #sb1 > span > #aboutmeheader3 {
-    bottom: 110%;
-    right: 20%;
-  }
-}
 #sb1 > #skills {
-  width: 100%;
-  height: 100%;
-  top: 15%;
-  margin-left: 2%;
+  width: 90%;
+  height: 100vh;
+  top: 45%;
   position: absolute;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   transition: 2s;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   overflow-x: visible;
   --show: none;
   display: var(--show);
 }
-@media all and (max-width: 1024px) {
-  #sb1 > #skills {
-    flex-direction: column;
-    margin-left: 0;
-  }
-}
 #sb1 > #skills > #skills_text {
   order: 2;
   width: 30%;
-  height: auto;
-  padding-left: 5%;
-  top: -5%;
+  height: 40%;
+  padding-left: 8%;
+  top: -15%;
   align-items: center;
   justify-content: left;
   position: relative;
   display: inline-flex;
   transition: 2s;
-}
-@media all and (max-width: 1024px) {
-  #sb1 > #skills > #skills_text {
-    width: 80vw;
-    right: 0;
-    padding-left: 0;
-    align-items: baseline;
-    justify-content: center;
-  }
-}
-@media all and (max-width: 32rem) {
-  #sb1 > #skills > #skills_text {
-    top: -80vh;
-  }
 }
 #sb1 > #skills > #skills_text > div {
   width: 100%;
@@ -1001,29 +903,19 @@ section2::-webkit-scrollbar {
   -o-border-image: linear-gradient(to bottom, #8c00ff 0%, #2c90fc 100%) 0 100%;
      border-image: linear-gradient(to bottom, #8c00ff 0%, #2c90fc 100%) 0 100%;
 }
-@media all and (max-width: 1024px) {
-  #sb1 > #skills > #skills_text > div {
-    border-width: 0px;
-  }
-}
 #sb1 > #skills > #skills_text > div > p {
   font-size: 26px;
   margin: 0;
-}
-@media all and (max-width: 1024px) {
-  #sb1 > #skills > #skills_text > div > p {
-    text-align: center;
-    font-size: 21px;
-  }
 }
 #sb1 > #skills > .loader {
   --ressizing: 1;
   order: 1;
   width: 30%;
-  height: auto;
+  height: 30%;
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   transform: skewY(15deg) translateX(-20%) translateY(10%) scale(var(--ressizing));
   -webkit-animation: boxcolor 5s;
@@ -1038,47 +930,6 @@ section2::-webkit-scrollbar {
           animation-iteration-count: infinite;
   -webkit-animation-play-state: running;
           animation-play-state: running;
-}
-@media all and (max-width: 192rem) {
-  #sb1 > #skills > .loader {
-    transform: skewY(15deg) translateX(-20%) translateY(10%) scale(1.2);
-  }
-}
-@media all and (max-width: 138rem) {
-  #sb1 > #skills > .loader {
-    transform: skewY(15deg) translateX(-20%) translateY(10%) scale(1);
-  }
-}
-@media all and (max-width: 1440px) {
-  #sb1 > #skills > .loader {
-    transform: skewY(15deg) translateX(-20%) translateY(10%) scale(0.9);
-    margin-right: 5%;
-  }
-}
-@media all and (max-width: 1024px) {
-  #sb1 > #skills > .loader {
-    transform: skewY(15deg) translateX(-20%) translateY(10%) scale(0.5);
-    top: -10%;
-  }
-}
-@media all and (max-width: 76.8rem) {
-  #sb1 > #skills > .loader {
-    transform: skewY(15deg) translateX(-20%) translateY(10%) scale(0.7);
-    margin-right: 10%;
-  }
-}
-@media all and (max-width: 57.5rem) {
-  #sb1 > #skills > .loader {
-    transform: skewY(15deg) translateX(-20%) translateY(10%) scale(0.66);
-    margin-right: 20%;
-  }
-}
-@media all and (max-width: 32rem) {
-  #sb1 > #skills > .loader {
-    transform: skewY(15deg) translateX(-20%) translateY(10%) scale(0.55);
-    margin-right: 38%;
-    top: -80vh;
-  }
 }
 #sb1 > #skills > .loader span {
   width: 400px;

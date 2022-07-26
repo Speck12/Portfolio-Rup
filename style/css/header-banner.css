@@ -766,8 +766,8 @@ main {
   width: 105%;
   min-width: 3%;
   height: 10%;
-  min-height: 3vh;
-  max-height: 30vh;
+  min-height: 5vw;
+  max-height: 20vw;
   top: -0.5%;
   margin-left: -1vw;
   position: fixed;
@@ -831,7 +831,7 @@ main {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-@media all and (max-width: 57.5rem) {
+@media all and (max-width: 920px) {
   #headerbanner > a > #logo {
     font-size: 6vw;
     width: 100%;
@@ -842,6 +842,9 @@ main {
     align-content: right;
     justify-content: center;
   }
+}
+#headerbanner > a > #logo:hover {
+  filter: saturate(50%);
 }
 #headerbanner > #aboutme-button {
   width: 20%;
@@ -906,7 +909,7 @@ main {
   background-repeat: no-repeat;
   transition: 2.2s;
 }
-@media all and (max-width: 57.5rem) {
+@media all and (max-width: 920px) {
   #headerbanner > #aboutme-button > a > #aboutme-ico {
     width: 10%;
     right: 1vw;
@@ -923,7 +926,7 @@ main {
   z-index: 86;
   transition: 2.2s;
 }
-@media all and (max-width: 57.5rem) {
+@media all and (max-width: 920px) {
   #headerbanner > #aboutme-button > a > #aboutme {
     display: none;
   }
@@ -1002,7 +1005,7 @@ main {
   z-index: 86;
   transition: 2.2s;
 }
-@media all and (max-width: 57.5rem) {
+@media all and (max-width: 920px) {
   #headerbanner > #projects-button > a > #projects {
     display: none;
   }
@@ -1082,7 +1085,7 @@ main {
   z-index: 86;
   transition: 2.2s;
 }
-@media all and (max-width: 57.5rem) {
+@media all and (max-width: 920px) {
   #headerbanner > #contact-button > a > #contact {
     display: none;
   }

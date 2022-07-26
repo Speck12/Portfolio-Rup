@@ -19,7 +19,7 @@ section4 {
 
 #sb2 {
     width: 100%;
-    height: 200vh;
+    height: 140vh;
 
     position: absolute;
     display:flex;
@@ -29,9 +29,8 @@ section4 {
 
     align-content: center;
 
-    overflow-y:hidden;
-
-    overflow-x: visible;
+    overflow-y: hidden;
+    overflow-x: hidden;
 
     background-color: $primary-color;
     box-shadow: $shadow-normal;
@@ -40,11 +39,16 @@ section4 {
 
     @include rainbow;
 
+    @include media-down('md'){
+        height: 180vh;
+    }
+
     & > #project_us {
         width: 100%;
-        height: 20%;
+        height: 12vw;
 
-        top: 5%;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
 
         justify-content: center;
         align-content: center;
@@ -67,6 +71,8 @@ section4 {
         font-size: 24vw;
         font-weight: bold;
 
+        margin: 0;
+        padding: 0;
 
         position: absolute;
 
@@ -74,6 +80,17 @@ section4 {
         display:var(--show);
 
         @extend .disSelection;
+
+        @include media-down('hd'){
+            left: 25vw;
+        }
+        @include media-down('lg'){
+            left: 15vw;
+        }
+        @include media-down('md'){
+            left: 12vw;
+        }
+        
     }
 
     & > #project_us > #projectheader2 {
@@ -85,7 +102,8 @@ section4 {
         font-size: 23vw;
         font-weight: bold;
 
-        white-space: nowrap;
+        margin: 0;
+        padding: 0;
 
         position: relative;
 
@@ -93,11 +111,24 @@ section4 {
         display:var(--show);
 
         @extend .disSelection;
+
+        @include media-down('ws'){
+            right: -25vw;
+        }
+        @include media-down('lg'){
+            right: -25vw;
+        }
+        @include media-down('md'){
+            right: -25vw;
+        }
+        @include media-down('sm'){
+            right: -115vw;
+        }
     }
 
     & > #project_us > #projectheader3 {
         width: 100%;
-        height: 15vh;
+        height: 15vw;
 
         background: linear-gradient(to bottom right, #8c00ff 0%, #2c90fc 70%, #8c00ff 100%);
         background-clip: text;
@@ -105,6 +136,10 @@ section4 {
 
         font-size: 12vw;
         font-weight: bold;
+        margin: 0;
+        padding: 0;
+
+        right: 400px;
 
         text-align: center;
 
@@ -112,8 +147,8 @@ section4 {
 
         position: absolute;
 
-        justify-content: center;
         align-content: center;
+        justify-content: center;
 
         transition: .5s;
 
@@ -126,7 +161,7 @@ section4 {
         height: 59%;
 
         margin-bottom: 2%;
-        margin-top: 5%;
+        margin-top: 5vh;
         
         display: flex;
         position: relative;
@@ -147,13 +182,18 @@ section4 {
         }
 
         @include media-down('md'){
-            top: 5%;
+            top: 6%;
             overflow: auto;
             height: 60%;
             margin-bottom: 40%;
             &::-webkit-scrollbar {
                 display: none;
             }
+        }
+
+        @include media-down('sm'){
+            top: -3%;
+            height: 70%;
         }
 
         & > .break {

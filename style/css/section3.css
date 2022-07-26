@@ -768,7 +768,7 @@ section3 {
   top: 370vh;
   position: absolute;
 }
-@media all and (max-width: 76.8rem) {
+@media all and (max-width: 768px) {
   section3 {
     top: 365vh;
   }

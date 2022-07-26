@@ -4,8 +4,8 @@
     width: 105%;
     min-width: 3%;
     height: 10%;
-    min-height: 3vh;
-    max-height: 30vh;
+    min-height: 5vw;
+    max-height: 20vw;
 
     top: -.5%;
     margin-left: -1vw;
@@ -77,6 +77,10 @@
 
 
         @extend .disSelection;
+
+        &:hover {
+            filter:saturate(50%);
+        }
     }
 
     & > #aboutme-button {

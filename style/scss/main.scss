@@ -1,7 +1,5 @@
-// Mixins-Import
 @import "mixin/animation", "mixin/breakpoint", "mixin/main";
 
-// CSS-Imports
 @import "animation", "font";
 
 * {
@@ -44,12 +42,12 @@ main {
     height: 100%;
 }
 
-// Disables the selection of text
+// NOTE Disables the selection of text
 .disSelection {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    // using => @extend .disSelection;
+    // ANCHOR using => @extend .disSelection;
 }
 
 .pointer {

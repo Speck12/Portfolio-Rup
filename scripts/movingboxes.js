@@ -46,6 +46,16 @@ var Reset5 = function() {
     timeout5 = false;
 }
 
+skillblock1.addEventListener("mousemove", (e)=> {
+    var x = e.offsetX;
+    var y = e.offsetY;
+
+    skillblock1.addEventListener("mousedown", (e)=> {
+        skillblock1.style.transform = 'translate3d(-150px, -50px, 0px)'
+        skillblock1.
+        console.log(x);
+    });
+})
 
 skillblock1.addEventListener("click", (e)=> {
     loadingbar1.style.width = "190px";

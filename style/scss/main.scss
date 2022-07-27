@@ -1,4 +1,4 @@
-@import "mixin/animation", "mixin/breakpoint", "mixin/main";
+@import "mixin/animation", "mixin/main";
 
 @import "animation", "font";
 
@@ -17,6 +17,8 @@ body {
     padding: 0;
 
     background-color: $primary-color;
+
+    //cursor: url("../css/img/cursor.svg"), auto;
 
     z-index: 1;
     

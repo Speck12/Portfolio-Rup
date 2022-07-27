@@ -201,3 +201,12 @@
         padding-left: 0%;
 	}
 }
+
+@keyframes cursor {
+	0% {
+		filter: opacity(100%) grayscale(0%);
+	}
+	100% {
+		filter: opacity(0%) grayscale(100%);
+	}
+}

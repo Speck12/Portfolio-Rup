@@ -1,10 +1,87 @@
-@import "mixin/breakpoint";
+@import "mixin/breakpoint"; //, "animation", "mixin/animation";
+
+// ! ANCHOR Cursor-Circle
+
+#cursor {
+    width: 14px;
+    height: 14px;
+
+    position: fixed;
+
+    border: 1px solid white;
+    border-radius: 50%;
+
+    transform: translateX(-7px);
+    filter: opacity(80%);
+
+    transition-duration: 10ms;
+    transition-timing-function: ease-out;
+
+    pointer-events: none;
+
+    z-index: 300;
+
+    //@include cursor;
+
+    &:active {
+        transform: scale(1.2);
+    }
+}
+
+// ! ANCHOR Header-Banner
+// LINK ./header-banner.scss:3
+
+header > #headerbanner {
+    & > a > #logo {
+        @include media-down('sm'){
+            font-size: 6vw;
+            width: 100%;
+
+            height: 100%;
+
+            margin: 0;
+            left: -10%;
+
+            order: 1;
+
+            align-content: right;
+            justify-content: center;
+        }
+    }
+
+    & > #aboutme-button > a > #aboutme-ico {
+        @include media-down('sm'){
+            width: 10%;
+            right: 1vw;
+            transition: 0s;
+        }
+    }
+
+    & > #aboutme-button > a > #aboutme {
+        @include media-down('sm'){
+            display: none;
+        }
+    }
+
+    & > #projects-button > a > #projects {
+        @include media-down('sm'){
+            display: none;
+        }
+    }
+
+    & > #contact-button > a > #contact {
+        @include media-down('sm'){
+            display: none;
+        }
+    }
+}
 
 
-// ! NOTE Section 1
+// ! ANCHOR Section 1
 // LINK ./section1.scss:6
 
 section1 {
+
     & > #par3 {
         
         @include media-down('lg'){
@@ -50,7 +127,7 @@ section1 {
 }
 
 
-// ! NOTE Section 2
+// ! ANCHOR Section 2
 // LINK ./section2.scss:20
 
 section2 > #sb1 {
@@ -60,7 +137,7 @@ section2 > #sb1 {
     }
 
 
-    // ! NOTE Headers
+    // ! ANCHOR Headers
     // LINK ./section2.scss:45
 
     & > span {
@@ -87,6 +164,9 @@ section2 > #sb1 {
         @include media-down('sm'){
             left: -15vw;
         }
+        @include media-down('sm'){
+            left: 15vw;
+        }
     }
 
     & > span > #aboutmeheader2 {
@@ -105,7 +185,10 @@ section2 > #sb1 {
             left: 12vw;
         }
         @include media-down('sm'){
-            left: -15vw;
+            left: 20vw;
+        }
+        @include media-down('xs'){
+            left: 30vw;
         }
     }
 
@@ -121,15 +204,18 @@ section2 > #sb1 {
             margin-right: 27vw;
         }
         @include media-down('md'){
-            margin-right: 37vw;
+            margin-right: 10vw;
         }
         @include media-down('sm'){
-            margin-right: 57vw;
+            margin-right: 61vw;
+        }
+        @include media-down('xs'){
+            margin-right: 80vw;
         }
     }
 
 
-    // ! NOTE Skill-box
+    // ! ANCHOR Skill-box
     // LINK ./section2.scss:136
 
     & > #skills { 
@@ -173,7 +259,7 @@ section2 > #sb1 {
         }
 
         @include media-down('md'){
-            transform: scale(1.3);
+            transform: scale(1.1);
             align-items: baseline;
             margin:0;
             left:0;
@@ -233,34 +319,33 @@ section2 > #sb1 {
         }
 
         @include media-down('md'){
-            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.9);
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.8);
             margin-top: 40%;
             left: 19%;
             margin-left: 45%;
         }
 
         @include media-down('sm'){
-            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.58);
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.51);
             left: -18vw;
             margin-left: 35%;
         }
 
         @include media-down('xs'){
-            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.55);
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.50);
             top: -40%;
         }
     }
 }
 
 section3 {
-    #par1_2 { // ? NOTE parallax background
+    #par1_2 { // ? ANCHOR parallax background
         @include media-down('sm'){
             left: 20%;
         }
     }
 }
 
-// TODO Adding breakpoints of section 4 & 3 + header banner
+// TODO Adding breakpoints of section 4 & 3
 // LINK ./section4.scss
 // LINK ./section3.scss
-// LINK ./header-banner.scss

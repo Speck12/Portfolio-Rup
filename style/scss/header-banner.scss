@@ -1,4 +1,4 @@
-@import "mixin/animation", "mixin/breakpoint", "mixin/main", "animation", "main";
+@import "mixin/animation", "mixin/main", "animation", "main";
 
 #headerbanner {
     width: 105%;
@@ -59,29 +59,15 @@
         font-size: 3vw;
 
         @include rainbow_text;
-
-        @include media-down('sm'){
-            font-size: 6vw;
-            width: 100%;
-
-            height: 100%;
-
-            margin: 0;
-            left: -10%;
-
-            order: 1;
-
-            align-content: right;
-            justify-content: center;
-        }
-
-
         @extend .disSelection;
 
         &:hover {
             filter:saturate(50%);
         }
     }
+
+
+    /** ANCHOR About Me-Button */
 
     & > #aboutme-button {
         width: 20%;
@@ -101,89 +87,80 @@
         @extend .disSelection;
 
         z-index: 87;
+    }
 
-        & > a {
-            width: 100%;
-            height: 100%;
+    & > #aboutme-button > a {
+        width: 100%;
+        height: 100%;
 
-            align-items: center;
-            justify-content: right;
+        align-items: center;
+        justify-content: right;
 
-            display: flex;
-            position: relative;
+        display: flex;
+        position: relative;
 
-            text-decoration: none;
+        text-decoration: none;
+    }
 
-            &:hover {
-                #aboutme-ico {
-                    opacity: 0.8;
-                    transition: .3s;
-                    @include jiggle;
-                }
-                #aboutme {
-                    opacity: 0.8;
-                    transition: .3s;
-                }
-            }
-
-            &:active {
-                #aboutme-ico {
-                    opacity: 0.5;
-                }
-                #aboutme {
-                    opacity: 0.5;
-                }
-            }
-
-            & > #aboutme-ico {
-                width: 15%;
-                min-width: 50px;
-                height: 20%;
-                min-height: 10.5vh;
-        
-                flex-wrap: wrap;
-                flex-direction: column;
-        
-                display: flex;
-                position: relative;
-        
-                background-image: url("img/ico/aboutme.png");
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                transition: 2.2s;
-
-                @include media-down('sm'){
-                    width: 10%;
-                    right: 1vw;
-                    transition: 0s;
-                }
-
-            }
-    
-            & > #aboutme {
-                font-size: 2vw;
-    
-                display: flex;
-                position: relative;
-    
-                margin-left: 4%;
-    
-                flex-wrap: wrap;
-                flex-direction: column;
-    
-                z-index: 86;
-
-                transition: 2.2s;
-    
-                @include media-down('sm'){
-                    display: none;
-                }
-                
-            }
+    & > #aboutme-button > a:hover {
+        #aboutme-ico {
+            opacity: 0.5;
+            transition: .3s;
+            @include jiggle;
+        }
+        #aboutme {
+            opacity: 0.5;
+            transition: .3s;
         }
     }
+
+    & > #aboutme-button > a:active {
+        #aboutme-ico {
+            opacity: 0.2;
+        }
+        #aboutme {
+            opacity: 0.2;
+        }
+    }
+
+    & > #aboutme-button > a > #aboutme-ico {
+        width: 15%;
+        min-width: 50px;
+        height: 20%;
+        min-height: 5.5vh;
+
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        display: flex;
+        position: relative;
+
+        background-image: url("img/ico/aboutme.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        transition: 2.2s;
+    }
+    
+    & > #aboutme-button > a > #aboutme {
+        font-size: 2vw;
+    
+        display: flex;
+        position: relative;
+    
+        margin-left: 4%;
+    
+        flex-wrap: wrap;
+        flex-direction: column;
+    
+        z-index: 86;
+
+        transition: 2.2s;      
+    }
+
+
+    /** ANCHOR Projects-Button */
 
     & > #projects-button {
         width: 10%;
@@ -203,85 +180,83 @@
         @extend .disSelection;
 
         z-index: 87;
+    }
 
-        & > a {
-            width: 100%;
-            height: 100%;
+    & > #projects-button > a {
+        width: 100%;
+        height: 100%;
 
-            align-items: center;
-            justify-content: right;
+        align-items: center;
+        justify-content: right;
 
-            display: flex;
-            position: relative;
+        display: flex;
+        position: relative;
 
-            text-decoration: none;
+        text-decoration: none;
+    }
 
-            &:hover {
-                #projects-ico {
-                    opacity: 0.8;
-                    transition: .3s;
-                    @include jiggle;
-                }
-                #projects {
-                    transition: 0s;
-                    opacity: 0.8;
-                }
-            }
-
-            &:active {
-                #projects-ico {
-                    opacity: 0.7;
-                }
-                #projects {
-                    opacity: 0.7;
-                }
-            }
-
-            & > #projects-ico {
-                width: 17%;
-                min-width: 50px;
-                height: 18%;
-                min-height: 10.5vh;
-
-                margin-right: 2%;
-        
-                flex-wrap: wrap;
-                flex-direction: column;
-        
-                display: flex;
-                position: relative;
-        
-                background-image: url("img/ico/project.png");
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                transition: 2.2s;
-
-            }
-    
-            & > #projects {
-                font-size: 2vw;
-    
-                display: flex;
-                position: relative;
-    
-                margin-left: 4%;
-    
-                flex-wrap: wrap;
-                flex-direction: column;
-    
-                z-index: 86;
-
-                transition: 2.2s;
-    
-                @include media-down('sm'){
-                    display: none;
-                }
-                
-            }
+    & > #projects-button > a:hover {
+        #projects-ico {
+            opacity: 0.5;
+            transition: .3s;
+            @include jiggle;
+        }
+        #projects {
+            transition: 0s;
+            opacity: 0.5;
         }
     }
+
+    & > #projects-button > a:active {
+        #projects-ico {
+            opacity: 0.2;
+        }
+        #projects {
+            opacity: 0.2;
+        }
+    }
+
+    & > #projects-button > a > #projects-ico {
+        width: 17%;
+        min-width: 50px;
+        height: 18%;
+        min-height: 5.5vh;
+
+        margin-right: 2%;
+        
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+        display: flex;
+        position: relative;
+        
+        background-image: url("img/ico/project.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        transition: 2.2s;
+
+    }
+    
+    & > #projects-button > a > #projects {
+        font-size: 2vw;
+    
+        display: flex;
+        position: relative;
+    
+        margin-left: 4%;
+    
+        flex-wrap: wrap;
+        flex-direction: column;
+    
+        z-index: 86;
+
+        transition: 2.2s;
+    }
+
+
+    /** ANCHOR Contact-Button */
 
     & > #contact-button {
         width: 30%;
@@ -304,82 +279,76 @@
         @extend .disSelection;
 
         z-index: 87;
+    }
 
-        & > a {
-            width: 100%;
-            height: 100%;
+    & > #contact-button > a {
+        width: 100%;
+        height: 100%;
 
-            text-decoration: none;
+        text-decoration: none;
 
-            align-items: center;
+        align-items: center;
 
-            display: flex;
-            position: absolute;
+        display: flex;
+        position: absolute;
+    }
 
-            &:hover {
-                #contact-ico {
-                    opacity: 0.8;
-                    transition: .3s;
-                    @include jiggle;
-                }
-                #contact {
-                    transition: 0s;
-                    opacity: 0.8;
-                }
-            }
-
-            &:active {
-                #contact-ico {
-                    opacity: 0.7;
-                }
-                #contact {
-                    opacity: 0.7;
-                }
-            }
-
-            & > #contact-ico {
-                width: 6%;
-                min-width: 47px;
-                height: 10%;
-                min-height: 10.5vh;
-        
-                flex-wrap: wrap;
-                flex-direction: column;
-        
-                display: flex;
-                position: relative;
-        
-                background-image: url("img/ico/mail.png");
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-    
-                z-index: 86;
-
-                transition: 2.2s;
-
-            }
-    
-            & > #contact {
-                font-size: 2vw;
-    
-                display: flex;
-                position: relative;
-    
-                margin-left: 4%;
-    
-                flex-wrap: wrap;
-                flex-direction: column;
-    
-                z-index: 86;
-
-                transition: 2.2s;
-    
-                @include media-down('sm'){
-                    display: none;
-                }
-                
-            }
+    & > #contact-button > a:hover {
+        #contact-ico {
+            opacity: 0.5;
+            transition: .3s;
+            @include jiggle;
         }
+        #contact {
+            transition: 0s;
+            opacity: 0.5;
+        }
+    }
+
+    & > #contact-button > a:active {
+        #contact-ico {
+            opacity: 0.2;
+        }
+        #contact {
+            opacity: 0.2;
+        }
+    }
+
+    & > #contact-button > a > #contact-ico {
+        width: 6%;
+        min-width: 47px;
+        height: 10%;
+        min-height: 5.5vh;
+        
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+        display: flex;
+        position: relative;
+        
+        background-image: url("img/ico/mail.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    
+        z-index: 86;
+
+        transition: 2.2s;
+    }
+    
+    & > #contact-button > a > #contact {
+        font-size: 2vw;
+    
+        display: flex;
+        position: relative;
+    
+        margin-left: 4%;
+    
+        flex-wrap: wrap;
+        flex-direction: column;
+    
+        z-index: 86;
+
+        transition: 2.2s;
     }
 }

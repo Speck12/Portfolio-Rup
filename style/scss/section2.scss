@@ -1,5 +1,5 @@
 // Mixins-Import
-@import "mixin/animation", "mixin/breakpoint", "mixin/main", "animation", "main";
+@import "mixin/animation", "mixin/main", "animation", "main";
 
 $innershadow: lighten(#333333, 20%);
 
@@ -157,7 +157,7 @@ section2 {
         --show: none;
         display:var(--show);
 
-
+        
 
         & > #skills_text {
             order: 2;
@@ -212,7 +212,6 @@ section2 {
             width: 30%;
             height: 30%;
 
-    
             position: relative;
             display: flex;
     
@@ -300,10 +299,6 @@ section2 {
                     @include ue;
 
                     @extend .disSelection;
-
-                    :hover {
-                        animation-play-state: paused
-                    }
                 }
             }
     
@@ -314,6 +309,10 @@ section2 {
                 & > h2, h3 {
                     text-shadow: none;
                 }
+            }
+
+            & .skill:active {
+                animation-play-state: paused;
             }
     
             & span::before {
@@ -331,8 +330,7 @@ section2 {
     
                 transform-origin: right;
                 transform: skewY(-45deg) translateX(400px) translateY(160px);
-                transition: .5s;
-                
+                transition: .5s
             }
 
             & span > div {

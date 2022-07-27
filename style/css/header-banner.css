@@ -347,6 +347,82 @@ h10 {
     padding-top: 0%;
   }
 }
+@-webkit-keyframes blend_in2 {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-top: 20%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-top: 0%;
+  }
+}
+@keyframes blend_in2 {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-top: 20%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-top: 0%;
+  }
+}
+@-webkit-keyframes blend_in3 {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-right: 20%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-right: 0%;
+  }
+}
+@keyframes blend_in3 {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-right: 20%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-right: 0%;
+  }
+}
+@-webkit-keyframes blend_in4 {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-left: 20%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-left: 0%;
+  }
+}
+@keyframes blend_in4 {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-left: 20%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-left: 0%;
+  }
+}
+@-webkit-keyframes cursor {
+  0% {
+    filter: opacity(100%) grayscale(0%);
+  }
+  100% {
+    filter: opacity(0%) grayscale(100%);
+  }
+}
+@keyframes cursor {
+  0% {
+    filter: opacity(100%) grayscale(0%);
+  }
+  100% {
+    filter: opacity(0%) grayscale(100%);
+  }
+}
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
   color: white;
   font-family: "Rajdhani", "Ubuntu", sans-serif;
@@ -544,6 +620,44 @@ h10 {
   100% {
     filter: opacity(100%) grayscale(0%);
     padding-top: 0%;
+  }
+}
+@keyframes blend_in2 {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-top: 20%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-top: 0%;
+  }
+}
+@keyframes blend_in3 {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-right: 20%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-right: 0%;
+  }
+}
+@keyframes blend_in4 {
+  0% {
+    filter: opacity(0%) grayscale(100%);
+    padding-left: 20%;
+  }
+  100% {
+    filter: opacity(100%) grayscale(0%);
+    padding-left: 0%;
+  }
+}
+@keyframes cursor {
+  0% {
+    filter: opacity(100%) grayscale(0%);
+  }
+  100% {
+    filter: opacity(0%) grayscale(100%);
   }
 }
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
@@ -795,6 +909,9 @@ main {
           animation-fill-mode: none;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  /** ANCHOR About Me-Button */
+  /** ANCHOR Projects-Button */
+  /** ANCHOR Contact-Button */
 }
 #headerbanner > a {
   margin-right: 2%;
@@ -831,18 +948,6 @@ main {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-@media all and (max-width: 920px) {
-  #headerbanner > a > #logo {
-    font-size: 6vw;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    left: -10%;
-    order: 1;
-    align-content: right;
-    justify-content: center;
-  }
-}
 #headerbanner > a > #logo:hover {
   filter: saturate(50%);
 }
@@ -867,7 +972,7 @@ main {
   text-decoration: none;
 }
 #headerbanner > #aboutme-button > a:hover #aboutme-ico {
-  opacity: 0.8;
+  opacity: 0.5;
   transition: 0.3s;
   -webkit-animation: jiggle 1s;
           animation: jiggle 1s;
@@ -885,20 +990,20 @@ main {
           animation-play-state: running;
 }
 #headerbanner > #aboutme-button > a:hover #aboutme {
-  opacity: 0.8;
+  opacity: 0.5;
   transition: 0.3s;
 }
 #headerbanner > #aboutme-button > a:active #aboutme-ico {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 #headerbanner > #aboutme-button > a:active #aboutme {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 #headerbanner > #aboutme-button > a > #aboutme-ico {
   width: 15%;
   min-width: 50px;
   height: 20%;
-  min-height: 10.5vh;
+  min-height: 5.5vh;
   flex-wrap: wrap;
   flex-direction: column;
   display: flex;
@@ -909,13 +1014,6 @@ main {
   background-repeat: no-repeat;
   transition: 2.2s;
 }
-@media all and (max-width: 920px) {
-  #headerbanner > #aboutme-button > a > #aboutme-ico {
-    width: 10%;
-    right: 1vw;
-    transition: 0s;
-  }
-}
 #headerbanner > #aboutme-button > a > #aboutme {
   font-size: 2vw;
   display: flex;
@@ -925,11 +1023,6 @@ main {
   flex-direction: column;
   z-index: 86;
   transition: 2.2s;
-}
-@media all and (max-width: 920px) {
-  #headerbanner > #aboutme-button > a > #aboutme {
-    display: none;
-  }
 }
 #headerbanner > #projects-button {
   width: 10%;
@@ -952,7 +1045,7 @@ main {
   text-decoration: none;
 }
 #headerbanner > #projects-button > a:hover #projects-ico {
-  opacity: 0.8;
+  opacity: 0.5;
   transition: 0.3s;
   -webkit-animation: jiggle 1s;
           animation: jiggle 1s;
@@ -971,19 +1064,19 @@ main {
 }
 #headerbanner > #projects-button > a:hover #projects {
   transition: 0s;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 #headerbanner > #projects-button > a:active #projects-ico {
-  opacity: 0.7;
+  opacity: 0.2;
 }
 #headerbanner > #projects-button > a:active #projects {
-  opacity: 0.7;
+  opacity: 0.2;
 }
 #headerbanner > #projects-button > a > #projects-ico {
   width: 17%;
   min-width: 50px;
   height: 18%;
-  min-height: 10.5vh;
+  min-height: 5.5vh;
   margin-right: 2%;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1004,11 +1097,6 @@ main {
   flex-direction: column;
   z-index: 86;
   transition: 2.2s;
-}
-@media all and (max-width: 920px) {
-  #headerbanner > #projects-button > a > #projects {
-    display: none;
-  }
 }
 #headerbanner > #contact-button {
   width: 30%;
@@ -1032,7 +1120,7 @@ main {
   position: absolute;
 }
 #headerbanner > #contact-button > a:hover #contact-ico {
-  opacity: 0.8;
+  opacity: 0.5;
   transition: 0.3s;
   -webkit-animation: jiggle 1s;
           animation: jiggle 1s;
@@ -1051,19 +1139,19 @@ main {
 }
 #headerbanner > #contact-button > a:hover #contact {
   transition: 0s;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 #headerbanner > #contact-button > a:active #contact-ico {
-  opacity: 0.7;
+  opacity: 0.2;
 }
 #headerbanner > #contact-button > a:active #contact {
-  opacity: 0.7;
+  opacity: 0.2;
 }
 #headerbanner > #contact-button > a > #contact-ico {
   width: 6%;
   min-width: 47px;
   height: 10%;
-  min-height: 10.5vh;
+  min-height: 5.5vh;
   flex-wrap: wrap;
   flex-direction: column;
   display: flex;
@@ -1084,9 +1172,4 @@ main {
   flex-direction: column;
   z-index: 86;
   transition: 2.2s;
-}
-@media all and (max-width: 920px) {
-  #headerbanner > #contact-button > a > #contact {
-    display: none;
-  }
 }/*# sourceMappingURL=header-banner.css.map */

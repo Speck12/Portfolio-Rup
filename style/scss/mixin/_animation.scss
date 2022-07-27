@@ -103,5 +103,14 @@
     animation-play-state: running;
 }
 
+@mixin cursor() {
+    animation: cursor 2s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
 
 

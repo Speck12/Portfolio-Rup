@@ -109,12 +109,12 @@ section1 {
 }
 
 #par5 { // ? NOTE parallax layer -> astronaut
-    width: 15%;
-    height: 15%;
+    width: 12%;
+    height: 12%;
 
     top: 91%;
 
-    position: relative;
+    position: absolute;
     --show: none;
     display: var(--show);
 

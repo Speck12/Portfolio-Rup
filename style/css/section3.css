@@ -775,9 +775,9 @@ section3 {
 }
 
 #par1_2 {
-  width: 120%;
+  width: 120vw;
   height: 100vh;
-  top: 5vh;
+  top: 90px;
   position: absolute;
   --show: none;
   display: var(--show);
@@ -792,15 +792,15 @@ section3 {
 
 #par2_2 {
   width: 100%;
-  height: 100%;
-  top: 90vh;
+  height: 150%;
+  top: 800px;
   right: 2vw;
   position: absolute;
   --show: none;
   display: var(--show);
   background-image: url("img/planet2.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   transition: 0.1s;
   z-index: 92;
@@ -809,7 +809,7 @@ section3 {
 #par3_2 {
   width: 100%;
   height: 100%;
-  top: 60vh;
+  top: 550px;
   position: absolute;
   --show: none;
   display: var(--show);
@@ -824,7 +824,7 @@ section3 {
 #par4_2 {
   width: 100%;
   height: 100%;
-  top: 77vh;
+  top: 730px;
   position: absolute;
   --show: none;
   display: var(--show);
@@ -839,7 +839,7 @@ section3 {
 #par5_2 {
   width: 100vw;
   height: 100%;
-  top: 63vh;
+  top: 580px;
   position: absolute;
   --show: none;
   display: var(--show);

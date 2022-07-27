@@ -163,7 +163,9 @@ section4 {
         margin-bottom: 2%;
         margin-top: 5vh;
         
-        display: flex;
+        --show: none;
+        display:var(--show);
+        
         position: relative;
 
         align-content: flex-start;

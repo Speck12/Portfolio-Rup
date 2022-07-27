@@ -72,6 +72,9 @@ section2 > #sb1 {
 
     & > span > #aboutmeheader1 {
 
+        @include media-down('xl'){
+            right: -45vw;
+        }
         @include media-down('ws'){
             right: -35vw;
         }
@@ -88,6 +91,10 @@ section2 > #sb1 {
 
     & > span > #aboutmeheader2 {
 
+        @include media-down('xl'){
+            top: -25%;
+            right: 9vw;
+        }
         @include media-down('ws'){
             right: 25vw;
         }
@@ -105,10 +112,10 @@ section2 > #sb1 {
     & > span > #aboutmeheader3 {
 
         @include media-down('xl'){
-            margin-right: 5vw;
+            margin-right: 15vw;
         }
         @include media-down('ws'){
-            margin-right: 17vw;
+            margin-right: 19vw;
         }
         @include media-down('lg'){
             margin-right: 27vw;
@@ -247,23 +254,9 @@ section2 > #sb1 {
 
 section3 {
     #par1_2 { // ? NOTE parallax background
-
-    }
-
-    #par2_2 { // ? NOTE parallax planet
-
-    }
-
-    #par3_2 { // ? NOTE parallax mountains
-
-    }
-
-    #par4_2 { // ? NOTE parallax ground
-
-    }
-
-    #par5_2 { // ? NOTE parallax ground front
-        
+        @include media-down('sm'){
+            left: 20%;
+        }
     }
 }
 

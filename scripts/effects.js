@@ -18,6 +18,7 @@ window.addEventListener("scroll", function(e) {
     // disabling imageviewer for devices with a width under 1000px
     if (window.screen.width <= 700) {
         target5.style.transform = 'translate3d(0px, -' + rate + 'px, 0px)';
+        target4.style.transform = 'translate3d(' + .08 * rate + 'px, -' + rate + 'px, 0px) rotate('+ .1 * rate +'deg) scale(1.9)';
         return
     }
 
@@ -56,9 +57,8 @@ const target15 = document.getElementById("projectheader2"); // ? Projects - Head
 const target16 = document.getElementById("projectheader3"); // ? Projects - Header 2
 
 const blend_in_about_me = 1.8;
-const blend_in_skill_box = 2.6;
+const blend_in_skill_box = 2.3;
 const blend_in_project = 5.3;
-
 const blend_in_parallax = 2.5;
 
 window.addEventListener("scroll", function(e) {
@@ -111,11 +111,11 @@ window.addEventListener("scroll", function(e) {
 
     rate = scrolled * .03;
 
-    target17.style.transform = 'translate3d(0px, -' + rate + 'px, 0px) rotate(-'+ rate/15 +'deg)';
+    target17.style.transform = 'translate3d(-150px, -' + rate + 'px, 0px) rotate(-'+ rate/18 +'deg) scale(1.2)';
 
     rate = scrolled * .1;
 
-    target18.style.transform = 'translate3d(0px, -' + rate * 1.5 + 'px, 0px)';
+    target18.style.transform = 'translate3d(0px, -' + rate * 1.5 + 'px, 0px) scale(.75)';
 
     target20.style.transform = 'translate3d(0px, -' + rate + 'px, 0px)';
     target19.style.transform = 'translate3d(0px, -' + rate * .7 + 'px, 0px)';
@@ -127,6 +127,8 @@ window.addEventListener("scroll", function(e) {
 });
 
 /* FOR BLEND IN EFFECTS */
+
+const target22 = document.getElementById("projectlist"); // ? Project-list of SECTION 4
 
 window.addEventListener("scroll", function(e) {
     var scrolled = window.pageYOffset / window.innerHeight;
@@ -144,7 +146,7 @@ window.addEventListener("scroll", function(e) {
         target3.style.setProperty("--show", "none");
         target4.style.setProperty("--show", "none");
         target5.style.setProperty("--show", "none");
-    } 
+    }
     
     if (scrolled < blend_in_parallax) {
         target17.style.setProperty("--show", "none");
@@ -163,18 +165,24 @@ window.addEventListener("scroll", function(e) {
 
     if (scrolled > blend_in_about_me) { // blending in the headers of SECTION 2
         target10.style.setProperty("--show", "flex"); target10.style.animation = "blend_in 2s";
-        target11.style.setProperty("--show", "flex"); target11.style.animation = "blend_in 2s";
-        target12.style.setProperty("--show", "flex"); target12.style.animation = "blend_in 2s";
-    } 
+        target11.style.setProperty("--show", "flex"); target11.style.animation = "blend_in3 2s";
+        target12.style.setProperty("--show", "flex"); target12.style.animation = "blend_in4 2s";
+    }
 
     if (scrolled > blend_in_skill_box) { // blending int the skill-box
-        target13.style.setProperty("--show", "flex"); target13.style.animation = "blend_in 2s"
+        target13.style.setProperty("--show", "flex"); target13.style.animation = "blend_in3 2s"
     } 
 
     if (scrolled > blend_in_project) { // blending int the projects
         target14.style.setProperty("--show", "flex"); target14.style.animation = "blend_in 2s";
         target15.style.setProperty("--show", "flex"); target15.style.animation = "blend_in 2s";
         target16.style.setProperty("--show", "flex"); target16.style.animation = "blend_in 2s";
+        target22.style.setProperty("--show", "flex"); target22.style.animation = "blend_in2 2s";
+
+        target10.style.setProperty("--show", "none");
+        target11.style.setProperty("--show", "none");
+        target12.style.setProperty("--show", "none");
+        target13.style.setProperty("--show", "none")
     }
 
 });

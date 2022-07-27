@@ -843,10 +843,10 @@ section1::-webkit-scrollbar {
 }
 
 #par5 {
-  width: 15%;
-  height: 15%;
+  width: 12%;
+  height: 12%;
   top: 91%;
-  position: relative;
+  position: absolute;
   --show: none;
   display: var(--show);
   background-image: url("img/astronaut.png");

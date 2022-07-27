@@ -1,6 +1,6 @@
 
 @mixin rainbow() {
-    animation: rainbow 2s;
+    animation: rainbow 15s;
     animation-timing-function: ease-out;
     animation-delay: 0;
     animation-direction: alternate;
@@ -74,6 +74,32 @@
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@mixin gardient() {
+    animation: gardient 9s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@mixin ue() {
+    animation: ue 2s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@mixin blend_in() {
+    animation: blend_in 2s;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+    animation-fill-mode:forwards;
     animation-play-state: running;
 }
 

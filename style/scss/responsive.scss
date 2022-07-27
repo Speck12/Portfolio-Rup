@@ -1,0 +1,273 @@
+@import "mixin/breakpoint";
+
+
+// ! NOTE Section 1
+// LINK ./section1.scss:6
+
+section1 {
+    & > #par3 {
+        
+        @include media-down('lg'){
+            background-size: cover;
+        }
+    }
+
+    & > #par5 {
+
+        @include media-down('xs'){
+            width: 35%;
+            height: 55%;
+            top: 95%;
+        }
+    }
+
+    & > #par6 {
+
+        @include media-down('xs'){
+            top: -20%;
+            left: 0;
+        }
+    
+        @include media-down('lg'){
+            margin:auto;
+            left: 0;
+        }
+    }
+
+    & > #par6 > h5 {
+
+        @include media-down('ws'){
+            font-size: 380%;
+        }
+    }
+
+    & > #par6 > h6 {
+        
+        @include media-down('ws'){
+            font-size: 420%;
+        }
+    }
+}
+
+
+// ! NOTE Section 2
+// LINK ./section2.scss:20
+
+section2 > #sb1 {
+
+    @include media-down('md'){
+        height: 140vh;
+    }
+
+
+    // ! NOTE Headers
+    // LINK ./section2.scss:45
+
+    & > span {
+
+        @include media-down('md'){
+            top: -46%;
+        }
+    }
+
+    & > span > #aboutmeheader1 {
+
+        @include media-down('ws'){
+            right: -35vw;
+        }
+        @include media-down('lg'){
+            left: -45vw;
+        }
+        @include media-down('md'){
+            left: 12vw;
+        }
+        @include media-down('sm'){
+            left: -15vw;
+        }
+    }
+
+    & > span > #aboutmeheader2 {
+
+        @include media-down('ws'){
+            right: 25vw;
+        }
+        @include media-down('lg'){
+            left: 15vw;
+        }
+        @include media-down('md'){
+            left: 12vw;
+        }
+        @include media-down('sm'){
+            left: -15vw;
+        }
+    }
+
+    & > span > #aboutmeheader3 {
+
+        @include media-down('xl'){
+            margin-right: 5vw;
+        }
+        @include media-down('ws'){
+            margin-right: 17vw;
+        }
+        @include media-down('lg'){
+            margin-right: 27vw;
+        }
+        @include media-down('md'){
+            margin-right: 37vw;
+        }
+        @include media-down('sm'){
+            margin-right: 57vw;
+        }
+    }
+
+
+    // ! NOTE Skill-box
+    // LINK ./section2.scss:136
+
+    & > #skills { 
+
+        @include media-down('md'){
+            top: 25%;
+            justify-content: center;
+            flex-direction: column;
+            flex-flow: column;
+            margin: 0;
+        }
+
+        @include media-down('xs'){
+            top: 45%;
+        }
+    }
+
+    & > #skills > #skills_text {
+
+        @include media-down('xl'){
+            transform: scale(1);
+            width: 40%;
+        }
+
+        @include media-down('ws'){
+            transform: scale(.9);
+            width: 115%;
+            left: -2;
+        }
+
+        @include media-down('hd'){
+            transform: scale(.9);
+            width: 100%;
+            left: -2;
+        }
+
+        @include media-down('lg'){
+            transform: scale(.7);
+            width: 120%;
+            top: -20%;
+        }
+
+        @include media-down('md'){
+            transform: scale(1.3);
+            align-items: baseline;
+            margin:0;
+            left:0;
+            margin-right: 12%;
+            top: 3vh;
+        }
+
+        @include media-down('sm'){
+            transform: scale(.8);
+            width: 110%;
+            right: 10%;
+            top: -2%;
+        }
+
+        @include media-down('xs'){
+            transform: scale(.7);
+            width: 150%;
+            top: -23%;
+        }
+    }
+
+    & > #skills > #skills_text > div {
+
+        @include media-down('md'){
+            border-width: 0px;
+            width: 100%;
+        }
+    }
+
+    & > #skills > #skills_text > div > p {
+
+        @include media-down('md'){
+            text-align: center;
+            font-size: 21px;
+        }
+    }
+
+    & > #skills > .loader {
+        @include media-down('xl'){
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(1.05);
+        }
+
+        @include media-down('ws'){
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.9);
+            margin-right: 15%;
+            left: 8%;
+        }
+
+        @include media-down('hd'){
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.6);
+        }
+
+        @include media-down('lg'){
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.7);
+            top: -15%;
+            left: 8%;
+        }
+
+        @include media-down('md'){
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.9);
+            margin-top: 40%;
+            left: 19%;
+            margin-left: 45%;
+        }
+
+        @include media-down('sm'){
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.58);
+            left: -18vw;
+            margin-left: 35%;
+        }
+
+        @include media-down('xs'){
+            transform: skewY(15deg) translateX(-20%) translateY(10%) scale(.55);
+            top: -40%;
+        }
+    }
+}
+
+section3 {
+    #par1_2 { // ? NOTE parallax background
+
+    }
+
+    #par2_2 { // ? NOTE parallax planet
+
+    }
+
+    #par3_2 { // ? NOTE parallax mountains
+
+    }
+
+    #par4_2 { // ? NOTE parallax ground
+
+    }
+
+    #par5_2 { // ? NOTE parallax ground front
+        
+    }
+}
+
+// TODO Adding breakpoints of section 4 & 3 + header banner
+// LINK ./section4.scss
+// LINK ./section3.scss
+// LINK ./header-banner.scss

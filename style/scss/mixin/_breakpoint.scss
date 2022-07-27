@@ -1,11 +1,11 @@
 $breakpoints: (
-        xs: 32rem,
-        sm: 57.5rem,
-        md: 76.8rem,
-        lg: 1025px,
-        ws: 120rem,
-        hd: 138rem,
-        xl: 192rem
+        xs: 375px, // 375 x 667
+        sm: 920px, // 920 x 1080
+        md: 768px, // 768 x 1024 
+        lg: 1024px, // 1024 x 768
+        hd: 1290px, // 1290 x 1080
+        ws: 1440px, // 1440 x 1024
+        xl: 2560px // 2560 x 1556
 );
 
 @mixin media-up($limit) {

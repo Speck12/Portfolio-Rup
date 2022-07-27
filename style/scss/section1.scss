@@ -1,180 +1,11 @@
 // Mixins-Import
 @import "mixin/animation", "mixin/breakpoint", "mixin/main", "animation", "main";
 
-#sb0 {
-    width: 100%;
-    height: 10%;
-
-    position: absolute;
-}
-
-section1 {
-    width: 110vw;
-    height: 100%;
-
-    -ms-overflow-style: none;  
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
-
-#par1 { // parallax background
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    display: flexbox;
-
-    background-image: url("img/space.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-origin: inherit;
-
-    z-index: 80;
-}
-
-#par2 { // parallax layer -> stones
-    width: 100%;
-    height: 100%;
-
-    top: 25%;
-
-    position: absolute;
-    display:flexbox;
-
-    background-image: url("img/stones.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    z-index: 83;
-}
-
-#par3 { // parallax layer -> planets
-    width: 100%;
-    height: 100%;
-
-    top: 5%;
-
-    position: absolute;
-    display: flexbox;
-
-    background-image: url("img/planets1.png");
-    background-position: center;
-    background-size: contain;
-
-    @include media-down('lg'){
-        background-size: cover;
-    }
-
-    background-repeat: no-repeat;
-
-    filter: drop-shadow(0 0 .3vw #2c90fc);
-
-    z-index: 82;
-}
-
-#par4 { // parallax layer -> planets
-    width: 100%;
-    height: 100%;
-
-    top: 5%;
-
-    position: absolute;
-    display: flexbox;
-
-    background-image: url("img/planets2.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    z-index: 81;
-}
-
-#par5 { // parallax layer -> astronaut
-    width: 15%;
-    height: 15%;
-
-    top: 91%;
-
-    @include media-down('xs'){
-        width: 35%;
-        height: 55%;
-        top: 95%;
-    }
-
-    position: relative;
-    display: flexbox;
-
-    background-image: url("img/astronaut.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    z-index: 85;
-}
-
-#par6 { // parallax layer -> text
-    width: 80%;
-    height: 13%;
-    min-height: 20vw;
-
-    left: 26%;
-
-    @include media-down('xs'){
-        top: -20%;
-        left: 0;
-    }
-
-    @include media-down('lg'){
-        margin:auto;
-        left: 0;
-    }
-
-    top: 4%;
-
-    position: relative;
-    display: flexbox;
-
-    font-weight: 800;
-    text-shadow: $text-shadow-normal;
-    text-align: center;
-
-    @extend .disSelection;
-
-    z-index: 82;
-
-    & > h5 {
-        font-weight: 600;
-        font-size: 280%;
-        margin-bottom: 3vh;
-
-        @include media-down('ws'){
-            font-size: 380%;
-        }
-    }
-
-    & > h6 {
-        font-weight: 800;
-        font-size: 360%;
-        height: 30%;
-        margin: auto;
-        
-        @include media-down('ws'){
-            font-size: 420%;
-        }
-    }
-
-}
+$transition: .1s;
 
 section1 {
     width: 100%;
     height: 100vh;
-
-    top: 9vh;
 
     position: fixed;
     overflow: hidden;
@@ -187,6 +18,150 @@ section1 {
 
     &::-webkit-scrollbar {
         display: none;
+    }
+}
+
+#sb0 {
+    width: 100%;
+    height: 20%;
+}
+
+#par1 { // ? NOTE parallax background
+    width: 100%;
+    height: 100%;
+
+    top: 5vh;
+
+    position: absolute;
+    --show: none;
+    display: var(--show);
+
+    background-image: url("img/space.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: inherit;
+
+    transition: $transition;
+
+    z-index: 80;
+}
+
+#par2 { // ? NOTE parallax layer -> stones
+    width: 100%;
+    height: 100%;
+
+    top: 25%;
+
+    position: absolute;
+    --show: none;
+    display: var(--show);
+
+    background-image: url("img/stones.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition: $transition;
+
+    z-index: 83;
+}
+
+#par3 { // ? NOTE parallax layer -> planets
+    width: 100%;
+    height: 100%;
+
+    top: 10%;
+
+    position: absolute;
+    --show: none;
+    display: var(--show);
+
+    background-image: url("img/planets1.png");
+    background-position: center;
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    transition: $transition;
+
+    z-index: 82;
+}
+
+#par4 { // ? NOTE parallax layer -> planets
+    width: 100%;
+    height: 100%;
+
+    top: 5%;
+
+    position: absolute;
+    --show: none;
+    display: var(--show);
+
+    background-image: url("img/planets2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition: $transition;
+
+    z-index: 81;
+}
+
+#par5 { // ? NOTE parallax layer -> astronaut
+    width: 15%;
+    height: 15%;
+
+    top: 91%;
+
+    position: relative;
+    --show: none;
+    display: var(--show);
+
+    background-image: url("img/astronaut.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    transition: $transition;
+
+    z-index: 85;
+}
+
+#par6 { // ? NOTE parallax layer -> text
+    width: 80%;
+    height: 13%;
+    min-height: 20vw;
+
+    left: 26%;
+
+    top: 4%;
+
+    position: relative;
+    --show: none;
+    display: var(--show);
+
+    font-weight: 800;
+    text-shadow: $text-shadow-normal;
+    text-align: center;
+
+    @extend .disSelection;
+
+    transition: $transition;
+
+    z-index: 82;
+
+    & > h5 {
+        font-weight: 600;
+        font-size: 280%;
+        margin-bottom: 3vh;
+    }
+
+    & > h6 {
+        font-weight: 800;
+        font-size: 360%;
+        height: 30%;
+        margin: auto;
     }
 
 }

@@ -1,142 +1,123 @@
 // Mixins-Import
 @import "mixin/animation", "mixin/breakpoint", "mixin/main", "animation", "main";
 
+$transition: .1s;
+
 section3 {
     width: 100vw;
-    height: 250vh;
+    height: 100vh;
 
-    top: 370vh;
+    top: 0vh;
 
-    @include media-down('md'){
-        top: 365vh;
-    }
+    position: fixed;
+    overflow: hidden;
 
-    position: absolute;
+    align-items: center;
+    justify-content:center;
 
-    overflow:hidden;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
 }
 
-#bg1 {
+#par1_2 { // ? NOTE parallax background
+    width: 120%;
+    height: 100vh;
+
+    top: 5vh;
+
+    position: absolute;
+    --show: none;
+    display: var(--show);
+
+    background-image: url("img/space.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    filter:saturate(120%) hue-rotate(30deg);
+
+    transition: $transition;
+
+    z-index: 91;
+}
+
+#par2_2 { // ? NOTE parallax planet
     width: 100%;
     height: 100%;
 
-    position: relative;
-    display: flex;
+    top: 90vh;
+    right: 2vw;
 
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    --show: none;
+    display: var(--show);
 
-    background-color: #1c1c1c;
+    background-image: url("img/planet2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    @include rainbow_inset;
-    
-    & > .loader {
-        width: 30vw;
-        height: 600px;
+    transition: $transition;
 
-        position: relative;
-        display: flex;
+    z-index: 92;
+}
 
-        flex-direction: column;
+#par3_2 { // ? NOTE parallax mountains
+    width: 100%;
+    height: 100%;
 
-        transform: skewY(15deg) translateX(-20%) translateY(10%);
+    top: 60vh;
 
-        @include boxcolor;
+    position: absolute;
+    --show: none;
+    display: var(--show);
 
-        @include media-down('xs'){
-            width: 60vw;
-            right: 5%;
-        }
+    background-image: url("img/mountains1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-        & span {
-            width: 400px;
-            height: 60px;
+    transition: $transition;
 
-            cursor:grab;
+    z-index: 93;
+}
 
-            position: relative;
-            display: flex;
+#par4_2 { // ? NOTE parallax ground
+    width: 100%;
+    height: 100%;
 
-            flex-direction: column;
+    top: 77vh;
 
-            background-color: $primary-button-color;
+    position: absolute;
+    --show: none;
+    display: var(--show);
 
-            transition: .5s;
+    background-image: url("img/ground.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-            z-index: var(--z);
+    transition: $transition;
 
-            @include boxflow;
-            animation-delay: calc(-1s * var(--z));
+    z-index: 94;
+}
 
-            & > h2 {
-                width: 100%;
-                height: 100%;
+#par5_2 { // ? NOTE parallax ground front
+    width: 100vw;
+    height: 100%;
 
-                bottom: 15%;
+    top: 63vh;
 
-                font-size: 30px;
-                font-weight: 100;
+    position: absolute;
+    --show: none;
+    display: var(--show);
 
-                align-items: center;
-                justify-content: center;
+    background-image: url("img/ground_f.png");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-                display: flex;
-                position: relative;
+    transition: $transition;
 
-                @extend .disSelection;
-            }
-        }
-
-        & span:hover {
-            background: #440ec2;
-            transition: 0s;
-            animation-play-state:paused;
-        }
-
-        & span:active {
-            cursor: grabbing;
-            
-        }
-
-        & span::before {
-            content: "";
-            position: absolute;
-
-            top: 0;
-
-            width: 240px;
-            height: 100%;
-
-            background: #292929;
-
-            transform-origin: right;
-            transform: skewY(-45deg) translateX(400px) translateY(160px);
-            transition: .5s;
-        }
-
-        & span:hover::before {
-            background-color: #25076b;
-            transition: 0s;
-        }
-
-        & span::after {
-            content: "";
-            position: absolute;
-
-            width: 100%;
-            height: 400%;
-
-            transform-origin: top;
-            transform: skewX(-45deg) translateY(-240px);
-
-            background-color: #383838;
-
-            transition: .5s;
-        }
-
-        & span:hover::after {
-            background-color: #390aa6;
-            transition: 0s;
-        }
-    }
+    z-index: 95;
 }

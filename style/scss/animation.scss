@@ -204,9 +204,12 @@
 
 @keyframes cursor {
 	0% {
-		filter: opacity(100%) grayscale(0%);
+		transform: translateX(-7px) scale(1);
+	}
+    50% {
+		transform: translateX(-7px) scale(2);
 	}
 	100% {
-		filter: opacity(0%) grayscale(100%);
+		transform: translateX(-7px) scale(1);
 	}
 }

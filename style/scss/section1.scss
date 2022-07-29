@@ -133,11 +133,13 @@ section1 {
     height: 13%;
     min-height: 20vw;
 
-    left: 26%;
+    top: 65%;
+    left: 20%;
 
-    top: 4%;
+    justify-content: center;
+    align-content: center;
 
-    position: relative;
+    position: absolute;
     --show: none;
     display: var(--show);
 
@@ -145,23 +147,21 @@ section1 {
     text-shadow: $text-shadow-normal;
     text-align: center;
 
-    @extend .disSelection;
-
     transition: $transition;
 
     z-index: 82;
 
-    & > h5 {
-        font-weight: 600;
-        font-size: 280%;
-        margin-bottom: 3vh;
-    }
-
     & > h6 {
         font-weight: 800;
-        font-size: 360%;
-        height: 30%;
+        font-size: 420%;
+        height: auto;
         margin: auto;
     }
 
+    & > #par6_2 {bottom: 10%;
+        font-size: 305%;
+        transform: rotate(180deg) scaleX(-1);
+    }
+
+    @extend .disSelection;
 }

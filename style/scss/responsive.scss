@@ -19,13 +19,8 @@
 
     pointer-events: none;
 
-    z-index: 300;
+    z-index: 200;
 
-    //@include cursor;
-
-    &:active {
-        transform: scale(1.2);
-    }
 }
 
 // ! ANCHOR Header-Banner
@@ -133,7 +128,7 @@ section1 {
 section2 > #sb1 {
 
     @include media-down('md'){
-        height: 140vh;
+        height: 160vh;
     }
 
 

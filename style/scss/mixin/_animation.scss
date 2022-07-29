@@ -105,9 +105,8 @@
 
 @mixin cursor() {
     animation: cursor 2s;
-    animation-timing-function: ease-out;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+    animation-timing-function:ease-out;
+    animation-direction: normal;
     animation-fill-mode: forwards;
     animation-play-state: running;
 }

@@ -409,18 +409,24 @@ h10 {
 }
 @-webkit-keyframes cursor {
   0% {
-    filter: opacity(100%) grayscale(0%);
+    transform: translateX(-7px) scale(1);
+  }
+  50% {
+    transform: translateX(-7px) scale(2);
   }
   100% {
-    filter: opacity(0%) grayscale(100%);
+    transform: translateX(-7px) scale(1);
   }
 }
 @keyframes cursor {
   0% {
-    filter: opacity(100%) grayscale(0%);
+    transform: translateX(-7px) scale(1);
+  }
+  50% {
+    transform: translateX(-7px) scale(2);
   }
   100% {
-    filter: opacity(0%) grayscale(100%);
+    transform: translateX(-7px) scale(1);
   }
 }
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
@@ -654,10 +660,13 @@ h10 {
 }
 @keyframes cursor {
   0% {
-    filter: opacity(100%) grayscale(0%);
+    transform: translateX(-7px) scale(1);
+  }
+  50% {
+    transform: translateX(-7px) scale(2);
   }
   100% {
-    filter: opacity(0%) grayscale(100%);
+    transform: translateX(-7px) scale(1);
   }
 }
 .base-headers, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10 {
@@ -890,7 +899,7 @@ section4::-webkit-scrollbar {
 
 #sb2 {
   width: 100%;
-  height: 140vh;
+  height: 160vh;
   position: absolute;
   display: flex;
   flex-wrap: wrap;

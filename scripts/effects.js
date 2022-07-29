@@ -24,9 +24,9 @@ window.addEventListener("scroll", function(e) {
 
     target1.style.transform = 'translate3d(0px, -' + rate + 'px, 0px) rotate('+ .0015 * rate +'deg)';
 
-    rate = scrolled * .2;
-
     target5.style.transform = 'translate3d(0px, -' + rate + 'px, 0px)';
+
+    rate = scrolled * .2;
 
     target2.style.transform = 'translate3d(0px, -' + rate + 'px, 0px) rotate('+ .001 * rate +'deg)';
 
